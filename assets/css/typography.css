@@ -1,0 +1,321 @@
+/* ==========================================
+   TOUB Gallery Premium V2
+   Typography System
+   Version: 1.0
+========================================== */
+
+/* ===========================
+   BODY
+=========================== */
+
+body{
+    font-family:var(--font-body);
+    font-size:var(--fs-md);
+    font-weight:var(--fw-regular);
+    line-height:1.7;
+    color:var(--color-black);
+}
+
+/* ===========================
+   DISPLAY
+=========================== */
+
+.display{
+    font-family:var(--font-heading);
+    font-size:clamp(3.5rem,8vw,6rem);
+    font-weight:700;
+    line-height:1;
+    letter-spacing:-2px;
+    margin-bottom:var(--space-6);
+}
+
+/* ===========================
+   HEADINGS
+=========================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family:var(--font-heading);
+    color:var(--color-black);
+    margin-bottom:var(--space-4);
+}
+
+h1{
+    font-size:clamp(3rem,6vw,4.5rem);
+    font-weight:700;
+    line-height:1.1;
+}
+
+h2{
+    font-size:clamp(2.5rem,5vw,3.5rem);
+    font-weight:700;
+    line-height:1.15;
+}
+
+h3{
+    font-size:2rem;
+    font-weight:700;
+    line-height:1.25;
+}
+
+h4{
+    font-size:1.5rem;
+    font-weight:600;
+}
+
+h5{
+    font-size:1.25rem;
+    font-weight:600;
+}
+
+h6{
+    font-size:1rem;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:2px;
+}
+
+/* ===========================
+   PARAGRAPHS
+=========================== */
+
+p{
+    margin-bottom:var(--space-4);
+    color:var(--color-gray-700);
+    font-size:var(--fs-md);
+    line-height:1.8;
+}
+
+/* ===========================
+   SMALL TEXT
+=========================== */
+
+small{
+    font-size:var(--fs-sm);
+    color:var(--color-gray-600);
+}
+
+/* ===========================
+   LABELS
+=========================== */
+
+label{
+    display:block;
+    margin-bottom:var(--space-2);
+    font-size:var(--fs-sm);
+    font-weight:var(--fw-semibold);
+    color:var(--color-gray-800);
+}
+
+/* ===========================
+   LINKS
+=========================== */
+
+a{
+    color:inherit;
+    text-decoration:none;
+    transition:var(--transition-fast);
+}
+
+a:hover{
+    color:var(--color-primary);
+}
+
+/* ===========================
+   LISTS
+=========================== */
+
+ul,
+ol{
+    margin-bottom:var(--space-4);
+    padding-left:1.2rem;
+}
+
+ul li,
+ol li{
+    margin-bottom:var(--space-2);
+    color:var(--color-gray-700);
+}
+
+/* ===========================
+   BLOCKQUOTE
+=========================== */
+
+blockquote{
+    margin:var(--space-6) 0;
+    padding:var(--space-4) var(--space-6);
+    border-left:5px solid var(--color-primary);
+    background:var(--color-gray-100);
+    font-style:italic;
+    color:var(--color-gray-800);
+}
+
+/* ===========================
+   CODE
+=========================== */
+
+code{
+    padding:4px 8px;
+    border-radius:8px;
+    background:var(--color-gray-100);
+    color:var(--color-accent);
+    font-family:monospace;
+    font-size:14px;
+}
+
+/* ===========================
+   PRE
+=========================== */
+
+pre{
+    overflow:auto;
+    padding:20px;
+    border-radius:var(--radius-md);
+    background:var(--color-black);
+    color:var(--color-white);
+    margin:var(--space-6) 0;
+}
+
+/* ===========================
+   STRONG
+=========================== */
+
+strong{
+    font-weight:700;
+    color:var(--color-black);
+}
+
+/* ===========================
+   EMPHASIS
+=========================== */
+
+em{
+    font-style:italic;
+}
+
+/* ===========================
+   HORIZONTAL RULE
+=========================== */
+
+hr{
+    border:none;
+    height:1px;
+    background:var(--color-gray-300);
+    margin:var(--space-8) 0;
+}
+
+/* ===========================
+   TEXT UTILITIES
+=========================== */
+
+.text-center{
+    text-align:center;
+}
+
+.text-left{
+    text-align:left;
+}
+
+.text-right{
+    text-align:right;
+}
+
+.text-primary{
+    color:var(--color-primary);
+}
+
+.text-secondary{
+    color:var(--color-secondary);
+}
+
+.text-success{
+    color:var(--success);
+}
+
+.text-warning{
+    color:var(--warning);
+}
+
+.text-danger{
+    color:var(--error);
+}
+
+.text-info{
+    color:var(--info);
+}
+
+.text-muted{
+    color:var(--color-gray-600);
+}
+
+.text-white{
+    color:var(--color-white);
+}
+
+.uppercase{
+    text-transform:uppercase;
+}
+
+.lowercase{
+    text-transform:lowercase;
+}
+
+.capitalize{
+    text-transform:capitalize;
+}
+
+.bold{
+    font-weight:700;
+}
+
+.semibold{
+    font-weight:600;
+}
+
+.light{
+    font-weight:300;
+}
+
+.italic{
+    font-style:italic;
+}
+
+.underline{
+    text-decoration:underline;
+}
+
+.no-decoration{
+    text-decoration:none;
+}
+
+/* ===========================
+   RESPONSIVE TYPOGRAPHY
+=========================== */
+
+@media (max-width:768px){
+
+    h1{
+        font-size:2.5rem;
+    }
+
+    h2{
+        font-size:2rem;
+    }
+
+    h3{
+        font-size:1.6rem;
+    }
+
+    .display{
+        font-size:3rem;
+    }
+
+    p{
+        font-size:15px;
+    }
+
+}
