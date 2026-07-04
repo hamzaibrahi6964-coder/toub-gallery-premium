@@ -1,1 +1,135 @@
+/* ==========================================
+   TOUB Gallery Premium V2
+   CSS Reset
+   Version: 1.0
+========================================== */
 
+/* Box sizing */
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* HTML */
+html{
+    scroll-behavior:smooth;
+    -webkit-text-size-adjust:100%;
+}
+
+/* Body */
+body{
+    min-height:100vh;
+    text-rendering:optimizeLegibility;
+    -webkit-font-smoothing:antialiased;
+    font-family:var(--font-body);
+    font-size:var(--fs-md);
+    background:var(--color-cream);
+    color:var(--color-black);
+    overflow-x:hidden;
+}
+
+/* Images */
+
+img,
+picture,
+video,
+canvas,
+svg{
+    display:block;
+    max-width:100%;
+}
+
+/* Forms */
+
+input,
+button,
+textarea,
+select{
+    font:inherit;
+    outline:none;
+}
+
+/* Links */
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+/* Lists */
+
+ul,
+ol{
+    list-style:none;
+}
+
+/* Tables */
+
+table{
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* Buttons */
+
+button{
+    border:none;
+    background:none;
+    cursor:pointer;
+}
+
+/* Textareas */
+
+textarea{
+    resize:vertical;
+}
+
+/* Form Elements */
+
+input,
+textarea,
+select{
+    border:none;
+    background:none;
+}
+
+/* Headings */
+
+h1,h2,h3,h4,h5,h6{
+    font-weight:inherit;
+}
+
+/* Paragraph */
+
+p{
+    line-height:1.7;
+}
+
+/* Selection */
+
+::selection{
+    background:var(--color-primary);
+    color:white;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:var(--color-gray-100);
+}
+
+::-webkit-scrollbar-thumb{
+    background:var(--color-primary);
+    border-radius:100px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:var(--color-primary-dark);
+}
