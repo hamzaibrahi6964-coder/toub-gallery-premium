@@ -1,0 +1,28 @@
+/* ==========================================
+   TOUB Gallery Premium V2
+   Main Stylesheet
+========================================== */
+
+/* Foundation */
+
+@import url("variables.css");
+@import url("reset.css");
+@import url("typography.css");
+@import url("layout.css");
+@import url("utilities.css");
+
+/* Components */
+
+@import url("components/buttons.css");
+@import url("components/navbar.css");
+@import url("components/cards.css");
+@import url("components/forms.css");
+@import url("components/product.css");
+@import url("components/cart.css");
+@import url("components/modal.css");
+@import url("components/footer.css");
+@import url("components/hero.css");
+@import url("components/alerts.css");
+@import url("components/badges.css");
+@import url("components/tables.css");
+@import url("components/animations.css");
