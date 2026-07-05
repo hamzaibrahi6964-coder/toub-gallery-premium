@@ -1,0 +1,439 @@
+/* ==========================================
+   TOUB Gallery Premium V2
+   Premium Navbar
+   Version: 1.0
+========================================== */
+
+/* ===========================
+   TOP ANNOUNCEMENT BAR
+=========================== */
+
+.top-bar{
+    background:var(--color-black);
+    color:var(--color-white);
+    height:40px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:14px;
+    font-weight:500;
+    letter-spacing:.5px;
+}
+
+.top-bar a{
+    color:var(--color-secondary);
+    font-weight:600;
+}
+
+.top-bar a:hover{
+    color:var(--color-white);
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:var(--z-sticky);
+
+    background:rgba(255,255,255,.96);
+
+    backdrop-filter:blur(20px);
+
+    border-bottom:1px solid rgba(0,0,0,.08);
+
+    transition:.3s ease;
+}
+
+.navbar.scrolled{
+    box-shadow:var(--shadow-sm);
+}
+
+/* ===========================
+   NAV CONTAINER
+=========================== */
+
+.nav-container{
+    max-width:var(--container-width);
+    margin:auto;
+
+    height:85px;
+
+    padding:0 var(--container-padding);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:30px;
+}
+
+/* ===========================
+   LOGO
+=========================== */
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.logo img{
+
+    width:52px;
+
+}
+
+.logo h2{
+
+    margin:0;
+
+    font-size:28px;
+
+}
+
+.logo span{
+
+    display:block;
+
+    font-size:13px;
+
+    color:var(--color-gray-600);
+
+}
+
+/* ===========================
+   NAV MENU
+=========================== */
+
+.nav-menu{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:28px;
+
+}
+
+.nav-menu a{
+
+    position:relative;
+
+    font-weight:600;
+
+    color:var(--color-black);
+
+}
+
+.nav-menu a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--color-primary);
+
+    transition:.3s;
+
+}
+
+.nav-menu a:hover::after{
+
+    width:100%;
+
+}
+
+.nav-menu a:hover{
+
+    color:var(--color-primary);
+
+}
+
+/* ===========================
+   SEARCH BAR
+=========================== */
+
+.nav-search{
+
+    flex:1;
+
+    max-width:420px;
+
+    position:relative;
+
+}
+
+.nav-search input{
+
+    width:100%;
+
+    height:48px;
+
+    padding:0 50px 0 18px;
+
+    border:1px solid var(--color-gray-300);
+
+    border-radius:50px;
+
+    background:white;
+
+}
+
+.nav-search button{
+
+    position:absolute;
+
+    right:5px;
+
+    top:5px;
+
+    width:38px;
+
+    height:38px;
+
+    border-radius:50%;
+
+    background:var(--color-primary);
+
+    color:white;
+
+}
+
+/* ===========================
+   ACTIONS
+=========================== */
+
+.nav-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+}
+
+.nav-icon{
+
+    width:48px;
+
+    height:48px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:white;
+
+    border:1px solid var(--color-gray-300);
+
+    transition:.3s;
+
+    position:relative;
+
+}
+
+.nav-icon:hover{
+
+    background:var(--color-primary);
+
+    color:white;
+
+}
+
+.nav-badge{
+
+    position:absolute;
+
+    top:-4px;
+
+    right:-4px;
+
+    width:22px;
+
+    height:22px;
+
+    border-radius:50%;
+
+    background:var(--color-secondary);
+
+    color:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:12px;
+
+    font-weight:700;
+
+}
+
+/* ===========================
+   DROPDOWN
+=========================== */
+
+.dropdown{
+
+    position:relative;
+
+}
+
+.dropdown-menu{
+
+    position:absolute;
+
+    top:120%;
+
+    right:0;
+
+    width:220px;
+
+    background:white;
+
+    border-radius:16px;
+
+    box-shadow:var(--shadow-md);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transform:translateY(10px);
+
+    transition:.3s;
+
+}
+
+.dropdown:hover .dropdown-menu{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translateY(0);
+
+}
+
+.dropdown-menu a{
+
+    display:block;
+
+    padding:14px 20px;
+
+}
+
+.dropdown-menu a:hover{
+
+    background:var(--color-gray-100);
+
+}
+
+/* ===========================
+   MOBILE MENU BUTTON
+=========================== */
+
+.menu-btn{
+
+    display:none;
+
+    width:50px;
+
+    height:50px;
+
+    border-radius:50%;
+
+    background:var(--color-primary);
+
+    color:white;
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:992px){
+
+    .nav-search{
+
+        display:none;
+
+    }
+
+    .nav-menu{
+
+        display:none;
+
+    }
+
+    .menu-btn{
+
+        display:flex;
+
+        align-items:center;
+
+        justify-content:center;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .top-bar{
+
+        display:none;
+
+    }
+
+    .nav-container{
+
+        height:72px;
+
+    }
+
+    .logo h2{
+
+        font-size:22px;
+
+    }
+
+    .nav-actions{
+
+        gap:8px;
+
+    }
+
+    .nav-icon{
+
+        width:42px;
+
+        height:42px;
+
+    }
+
+}
