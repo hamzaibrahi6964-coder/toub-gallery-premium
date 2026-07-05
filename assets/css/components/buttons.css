@@ -1,1 +1,360 @@
+/* ==========================================
+   TOUB Gallery Premium V2
+   Buttons Component
+   Version: 1.0
+========================================== */
 
+/* ===========================
+   BASE BUTTON
+=========================== */
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+
+    min-height:52px;
+    padding:0 28px;
+
+    border:none;
+    border-radius:var(--radius-round);
+
+    font-family:var(--font-body);
+    font-size:15px;
+    font-weight:var(--fw-semibold);
+
+    cursor:pointer;
+
+    transition:all var(--transition-normal);
+
+    text-decoration:none;
+
+    user-select:none;
+
+    white-space:nowrap;
+}
+
+/* ===========================
+   PRIMARY BUTTON
+=========================== */
+
+.btn-primary{
+
+    background:var(--color-primary);
+
+    color:var(--color-white);
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+.btn-primary:hover{
+
+    background:var(--color-primary-dark);
+
+    transform:translateY(-3px);
+
+    box-shadow:var(--shadow-md);
+
+}
+
+.btn-primary:active{
+
+    transform:scale(.97);
+
+}
+
+/* ===========================
+   SECONDARY BUTTON
+=========================== */
+
+.btn-secondary{
+
+    background:transparent;
+
+    color:var(--color-primary);
+
+    border:2px solid var(--color-primary);
+
+}
+
+.btn-secondary:hover{
+
+    background:var(--color-primary);
+
+    color:var(--color-white);
+
+}
+
+/* ===========================
+   GOLD BUTTON
+=========================== */
+
+.btn-gold{
+
+    background:var(--color-secondary);
+
+    color:var(--color-white);
+
+}
+
+.btn-gold:hover{
+
+    background:var(--color-secondary-dark);
+
+    transform:translateY(-3px);
+
+}
+
+/* ===========================
+   DARK BUTTON
+=========================== */
+
+.btn-dark{
+
+    background:var(--color-black);
+
+    color:var(--color-white);
+
+}
+
+.btn-dark:hover{
+
+    background:#000;
+
+}
+
+/* ===========================
+   LIGHT BUTTON
+=========================== */
+
+.btn-light{
+
+    background:var(--color-white);
+
+    color:var(--color-black);
+
+    border:1px solid var(--color-gray-300);
+
+}
+
+.btn-light:hover{
+
+    background:var(--color-gray-100);
+
+}
+
+/* ===========================
+   SUCCESS BUTTON
+=========================== */
+
+.btn-success{
+
+    background:var(--success);
+
+    color:white;
+
+}
+
+.btn-success:hover{
+
+    filter:brightness(.9);
+
+}
+
+/* ===========================
+   DANGER BUTTON
+=========================== */
+
+.btn-danger{
+
+    background:var(--error);
+
+    color:white;
+
+}
+
+.btn-danger:hover{
+
+    filter:brightness(.9);
+
+}
+
+/* ===========================
+   BUTTON SIZES
+=========================== */
+
+.btn-sm{
+
+    min-height:40px;
+
+    padding:0 18px;
+
+    font-size:13px;
+
+}
+
+.btn-md{
+
+    min-height:50px;
+
+    padding:0 24px;
+
+}
+
+.btn-lg{
+
+    min-height:58px;
+
+    padding:0 36px;
+
+    font-size:16px;
+
+}
+
+.btn-xl{
+
+    min-height:64px;
+
+    padding:0 44px;
+
+    font-size:18px;
+
+}
+
+/* ===========================
+   FULL WIDTH
+=========================== */
+
+.btn-block{
+
+    width:100%;
+
+}
+
+/* ===========================
+   ICON BUTTON
+=========================== */
+
+.btn-icon{
+
+    width:52px;
+
+    height:52px;
+
+    padding:0;
+
+    border-radius:50%;
+
+}
+
+/* ===========================
+   DISABLED
+=========================== */
+
+.btn:disabled{
+
+    opacity:.6;
+
+    cursor:not-allowed;
+
+    pointer-events:none;
+
+}
+
+/* ===========================
+   LOADING BUTTON
+=========================== */
+
+.btn-loading{
+
+    pointer-events:none;
+
+    opacity:.8;
+
+}
+
+/* ===========================
+   BUTTON GROUP
+=========================== */
+
+.btn-group{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+}
+
+/* ===========================
+   OUTLINE GOLD
+=========================== */
+
+.btn-outline-gold{
+
+    background:transparent;
+
+    border:2px solid var(--color-secondary);
+
+    color:var(--color-secondary);
+
+}
+
+.btn-outline-gold:hover{
+
+    background:var(--color-secondary);
+
+    color:white;
+
+}
+
+/* ===========================
+   GHOST BUTTON
+=========================== */
+
+.btn-ghost{
+
+    background:transparent;
+
+    color:var(--color-black);
+
+}
+
+.btn-ghost:hover{
+
+    background:rgba(0,0,0,.05);
+
+}
+
+/* ===========================
+   ROUNDED BUTTON
+=========================== */
+
+.btn-rounded{
+
+    border-radius:50px;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width:768px){
+
+    .btn{
+
+        width:100%;
+
+    }
+
+    .btn-group{
+
+        flex-direction:column;
+
+    }
+
+}
