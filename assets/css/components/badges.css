@@ -1,0 +1,3158 @@
+/* ==========================================
+   MODULE 1 - BADGE BASE
+========================================== */
+
+/* ===========================
+   BADGE
+=========================== */
+
+.badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:6px;
+
+    min-width:28px;
+
+    min-height:28px;
+
+    padding:4px 10px;
+
+    border:1px solid transparent;
+
+    border-radius:var(--radius-lg);
+
+    background:var(--color-gray-100);
+
+    color:var(--color-gray-800);
+
+    font-size:12px;
+
+    font-weight:600;
+
+    line-height:1;
+
+    white-space:nowrap;
+
+    vertical-align:middle;
+
+    user-select:none;
+
+    transition:
+        background .3s ease,
+        color .3s ease,
+        border-color .3s ease,
+        transform .3s ease,
+        box-shadow .3s ease;
+
+}
+
+/* ===========================
+   HOVER
+=========================== */
+
+.badge:hover{
+
+    transform:translateY(-1px);
+
+}
+
+/* ===========================
+   ACTIVE
+=========================== */
+
+.badge:active{
+
+    transform:scale(.96);
+
+}
+
+/* ===========================
+   OUTLINED
+=========================== */
+
+.badge-outlined{
+
+    background:transparent;
+
+    border-color:currentColor;
+
+}
+
+/* ===========================
+   SOFT
+=========================== */
+
+.badge-soft{
+
+    box-shadow:none;
+
+}
+
+/* ===========================
+   ELEVATED
+=========================== */
+
+.badge-elevated{
+
+    box-shadow:var(--shadow-md);
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+    .badge{
+
+        min-height:26px;
+
+        padding:4px 9px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .badge{
+
+        font-size:11px;
+
+        min-width:24px;
+
+    }
+
+}
+
+/* ==========================================
+   MODULE 2 - BADGE VARIANTS
+========================================== */
+
+/* ===========================
+   PRIMARY
+=========================== */
+
+.badge-primary{
+
+    background:var(--color-primary);
+
+    color:var(--color-white);
+
+    border-color:var(--color-primary);
+
+}
+
+/* ===========================
+   SUCCESS
+=========================== */
+
+.badge-success{
+
+    background:rgba(34,197,94,.12);
+
+    color:var(--color-success);
+
+    border-color:rgba(34,197,94,.25);
+
+}
+
+/* ===========================
+   DANGER
+=========================== */
+
+.badge-danger{
+
+    background:rgba(239,68,68,.12);
+
+    color:var(--color-danger);
+
+    border-color:rgba(239,68,68,.25);
+
+}
+
+/* ===========================
+   WARNING
+=========================== */
+
+.badge-warning{
+
+    background:rgba(245,158,11,.14);
+
+    color:#92400e;
+
+    border-color:rgba(245,158,11,.28);
+
+}
+
+/* ===========================
+   INFO
+=========================== */
+
+.badge-info{
+
+    background:rgba(59,130,246,.12);
+
+    color:var(--color-primary);
+
+    border-color:rgba(59,130,246,.25);
+
+}
+
+/* ===========================
+   NEUTRAL
+=========================== */
+
+.badge-neutral{
+
+    background:var(--color-gray-100);
+
+    color:var(--color-gray-700);
+
+    border-color:rgba(15,23,42,.08);
+
+}
+
+/* ===========================
+   DARK
+=========================== */
+
+.badge-dark{
+
+    background:var(--color-gray-900);
+
+    color:var(--color-white);
+
+    border-color:var(--color-gray-900);
+
+}
+
+/* ===========================
+   LIGHT
+=========================== */
+
+.badge-light{
+
+    background:var(--color-white);
+
+    color:var(--color-gray-800);
+
+    border-color:rgba(15,23,42,.08);
+
+}
+
+/* ===========================
+   OUTLINE VARIANTS
+=========================== */
+
+.badge-outlined.badge-primary,
+.badge-outlined.badge-success,
+.badge-outlined.badge-danger,
+.badge-outlined.badge-warning,
+.badge-outlined.badge-info,
+.badge-outlined.badge-neutral,
+.badge-outlined.badge-dark,
+.badge-outlined.badge-light{
+
+    background:transparent;
+
+}
+
+/* ===========================
+   HOVER
+=========================== */
+
+.badge-primary:hover,
+.badge-dark:hover{
+
+    filter:brightness(.95);
+
+}
+
+.badge-success:hover,
+.badge-danger:hover,
+.badge-warning:hover,
+.badge-info:hover{
+
+    filter:brightness(.98);
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+    .badge{
+
+        border-radius:var(--radius-md);
+
+    }
+
+}
+
+/* ==========================================
+   MODULE 3 - BADGE SIZES
+========================================== */
+
+/* ===========================
+   EXTRA SMALL
+=========================== */
+
+.badge-xs{
+
+    min-width:18px;
+
+    min-height:18px;
+
+    padding:2px 6px;
+
+    font-size:10px;
+
+    border-radius:var(--radius-sm);
+
+    gap:4px;
+
+}
+
+/* ===========================
+   SMALL
+=========================== */
+
+.badge-sm{
+
+    min-width:22px;
+
+    min-height:22px;
+
+    padding:3px 8px;
+
+    font-size:11px;
+
+    border-radius:var(--radius-md);
+
+    gap:5px;
+
+}
+
+/* ===========================
+   MEDIUM
+=========================== */
+
+.badge-md{
+
+    min-width:28px;
+
+    min-height:28px;
+
+    padding:4px 10px;
+
+    font-size:12px;
+
+}
+
+/* ===========================
+   LARGE
+=========================== */
+
+.badge-lg{
+
+    min-width:34px;
+
+    min-height:34px;
+
+    padding:6px 14px;
+
+    font-size:13px;
+
+    border-radius:var(--radius-xl);
+
+    gap:8px;
+
+}
+
+/* ===========================
+   EXTRA LARGE
+=========================== */
+
+.badge-xl{
+
+    min-width:42px;
+
+    min-height:42px;
+
+    padding:8px 18px;
+
+    font-size:15px;
+
+    border-radius:var(--radius-2xl);
+
+    gap:10px;
+
+}
+
+/* ===========================
+   ICON SCALING
+=========================== */
+
+.badge-xs i,
+.badge-xs svg{
+
+    width:10px;
+
+    height:10px;
+
+    font-size:10px;
+
+}
+
+.badge-sm i,
+.badge-sm svg{
+
+    width:12px;
+
+    height:12px;
+
+    font-size:12px;
+
+}
+
+.badge-md i,
+.badge-md svg{
+
+    width:14px;
+
+    height:14px;
+
+    font-size:14px;
+
+}
+
+.badge-lg i,
+.badge-lg svg{
+
+    width:16px;
+
+    height:16px;
+
+    font-size:16px;
+
+}
+
+.badge-xl i,
+.badge-xl svg{
+
+    width:18px;
+
+    height:18px;
+
+    font-size:18px;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+    .badge-xl{
+
+        min-width:38px;
+
+        min-height:38px;
+
+        font-size:14px;
+
+    }
+
+    .badge-lg{
+
+        min-width:32px;
+
+        min-height:32px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .badge-lg{
+
+        padding:5px 12px;
+
+    }
+
+    .badge-xl{
+
+        padding:6px 14px;
+
+    }
+
+}/* ==========================================
+   MODULE 4 - STATUS BADGES
+========================================== */
+
+/* ===========================
+   BASE STATUS
+=========================== */
+
+.badge-status{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    font-weight:600;
+
+}
+
+/* ===========================
+   STATUS DOT
+=========================== */
+
+.badge-status::before{
+
+    content:"";
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    background:currentColor;
+
+    flex-shrink:0;
+
+}
+
+/* ===========================
+   ONLINE
+=========================== */
+
+.badge-online{
+
+    color:var(--color-success);
+
+    background:rgba(34,197,94,.10);
+
+    border-color:rgba(34,197,94,.25);
+
+}
+
+.badge-online::before{
+
+    background:var(--color-success);
+
+    box-shadow:0 0 0 4px rgba(34,197,94,.15);
+
+}
+
+/* ===========================
+   OFFLINE
+=========================== */
+
+.badge-offline{
+
+    color:var(--color-gray-500);
+
+    background:rgba(100,116,139,.10);
+
+    border-color:rgba(100,116,139,.20);
+
+}
+
+.badge-offline::before{
+
+    background:var(--color-gray-500);
+
+}
+
+/* ===========================
+   ACTIVE
+=========================== */
+
+.badge-active{
+
+    color:var(--color-success);
+
+    background:rgba(34,197,94,.12);
+
+    border-color:rgba(34,197,94,.25);
+
+}
+
+/* ===========================
+   INACTIVE
+=========================== */
+
+.badge-inactive{
+
+    color:var(--color-gray-600);
+
+    background:rgba(148,163,184,.12);
+
+    border-color:rgba(148,163,184,.20);
+
+}
+
+/* ===========================
+   PENDING
+=========================== */
+
+.badge-pending{
+
+    color:#92400e;
+
+    background:rgba(245,158,11,.14);
+
+    border-color:rgba(245,158,11,.25);
+
+}
+
+/* ===========================
+   VERIFIED
+=========================== */
+
+.badge-verified{
+
+    color:var(--color-primary);
+
+    background:rgba(59,130,246,.12);
+
+    border-color:rgba(59,130,246,.25);
+
+}
+
+/* ===========================
+   NEW
+=========================== */
+
+.badge-new{
+
+    color:#7c3aed;
+
+    background:rgba(124,58,237,.12);
+
+    border-color:rgba(124,58,237,.25);
+
+}
+
+/* ===========================
+   FEATURED
+=========================== */
+
+.badge-featured{
+
+    color:#b45309;
+
+    background:rgba(251,191,36,.16);
+
+    border-color:rgba(251,191,36,.28);
+
+}
+
+/* ===========================
+   ARCHIVED
+=========================== */
+
+.badge-archived{
+
+    color:var(--color-danger);
+
+    background:rgba(239,68,68,.10);
+
+    border-color:rgba(239,68,68,.22);
+
+}
+
+/* ===========================
+   LIVE INDICATOR
+=========================== */
+
+.badge-live::before{
+
+    animation:badgeLivePulse 1.8s ease-in-out infinite;
+
+}
+
+@keyframes badgeLivePulse{
+
+    0%,100%{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+    50%{
+
+        transform:scale(1.45);
+
+        opacity:.6;
+
+    }
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:480px){
+
+    .badge-status{
+
+        gap:6px;
+
+    }
+
+    .badge-status::before{
+
+        width:7px;
+
+        height:7px;
+
+    }
+
+}
+
+/* ==========================================
+   MODULE 5 - NOTIFICATION BADGES
+========================================== */
+
+/* ===========================
+   NOTIFICATION BADGE
+=========================== */
+
+.badge-notification{
+
+    position:absolute;
+
+    top:-6px;
+
+    right:-6px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-width:20px;
+
+    height:20px;
+
+    padding:0 6px;
+
+    border:2px solid var(--color-white);
+
+    border-radius:999px;
+
+    background:var(--color-danger);
+
+    color:var(--color-white);
+
+    font-size:11px;
+
+    font-weight:700;
+
+    line-height:1;
+
+    white-space:nowrap;
+
+    z-index:10;
+
+}
+
+/* ===========================
+   BADGE WRAPPER
+=========================== */
+
+.badge-wrapper{
+
+    position:relative;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+/* ===========================
+   POSITION VARIANTS
+=========================== */
+
+.badge-top-right{
+
+    top:-6px;
+
+    right:-6px;
+
+}
+
+.badge-top-left{
+
+    top:-6px;
+
+    left:-6px;
+
+}
+
+.badge-bottom-right{
+
+    bottom:-6px;
+
+    right:-6px;
+
+    top:auto;
+
+}
+
+.badge-bottom-left{
+
+    bottom:-6px;
+
+    left:-6px;
+
+    top:auto;
+
+}
+
+/* ===========================
+   COUNT BADGES
+=========================== */
+
+.badge-count{
+
+    min-width:22px;
+
+    height:22px;
+
+    padding:0 7px;
+
+}
+
+.badge-count-lg{
+
+    min-width:26px;
+
+    height:26px;
+
+    font-size:12px;
+
+}
+
+.badge-count-xl{
+
+    min-width:30px;
+
+    height:30px;
+
+    font-size:13px;
+
+}
+
+/* ===========================
+   OVERFLOW COUNT
+=========================== */
+
+.badge-overflow{
+
+    letter-spacing:-0.2px;
+
+    font-variant-numeric:tabular-nums;
+
+}
+
+/* ===========================
+   PULSE
+=========================== */
+
+.badge-notification-pulse{
+
+    animation:badgeNotificationPulse 2s ease-in-out infinite;
+
+}
+
+@keyframes badgeNotificationPulse{
+
+    0%,100%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.12);
+
+    }
+
+}
+
+/* ===========================
+   STATUS COLORS
+=========================== */
+
+.badge-notification-success{
+
+    background:var(--color-success);
+
+}
+
+.badge-notification-warning{
+
+    background:var(--color-warning);
+
+    color:var(--color-gray-900);
+
+}
+
+.badge-notification-info{
+
+    background:var(--color-primary);
+
+}
+
+.badge-notification-neutral{
+
+    background:var(--color-gray-700);
+
+}
+
+/* ===========================
+   OUTLINED
+=========================== */
+
+.badge-notification-outlined{
+
+    background:var(--color-white);
+
+    color:var(--color-danger);
+
+    border-color:var(--color-danger);
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+    .badge-notification{
+
+        min-width:18px;
+
+        height:18px;
+
+        font-size:10px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .badge-notification{
+
+        top:-4px;
+
+        right:-4px;
+
+    }
+
+}
+
+/* ==========================================
+   MODULE 6 - ICON BADGES
+========================================== */
+
+/* ===========================
+   ICON BADGE
+=========================== */
+
+.badge-icon{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+}
+
+/* ===========================
+   ICON
+=========================== */
+
+.badge-icon i,
+.badge-icon svg{
+
+    flex-shrink:0;
+
+    width:14px;
+
+    height:14px;
+
+    font-size:14px;
+
+    line-height:1;
+
+}
+
+/* ===========================
+   ICON ONLY
+=========================== */
+
+.badge-icon-only{
+
+    width:32px;
+
+    height:32px;
+
+    min-width:32px;
+
+    padding:0;
+
+    border-radius:50%;
+
+}
+
+.badge-icon-only i,
+.badge-icon-only svg{
+
+    width:16px;
+
+    height:16px;
+
+    font-size:16px;
+
+}
+
+/* ===========================
+   SMALL ICON ONLY
+=========================== */
+
+.badge-icon-only.badge-sm{
+
+    width:26px;
+
+    height:26px;
+
+    min-width:26px;
+
+}
+
+.badge-icon-only.badge-sm i,
+.badge-icon-only.badge-sm svg{
+
+    width:12px;
+
+    height:12px;
+
+    font-size:12px;
+
+}
+
+/* ===========================
+   LARGE ICON ONLY
+=========================== */
+
+.badge-icon-only.badge-lg{
+
+    width:40px;
+
+    height:40px;
+
+    min-width:40px;
+
+}
+
+.badge-icon-only.badge-lg i,
+.badge-icon-only.badge-lg svg{
+
+    width:18px;
+
+    height:18px;
+
+    font-size:18px;
+
+}
+
+/* ===========================
+   ICON LEFT
+=========================== */
+
+.badge-icon-left{
+
+    flex-direction:row;
+
+}
+
+/* ===========================
+   ICON RIGHT
+=========================== */
+
+.badge-icon-right{
+
+    flex-direction:row-reverse;
+
+}
+
+/* ===========================
+   OUTLINED ICON
+=========================== */
+
+.badge-icon-outlined{
+
+    background:transparent;
+
+    border:1px solid currentColor;
+
+}
+
+/* ===========================
+   CIRCLE ICON
+=========================== */
+
+.badge-icon-circle{
+
+    border-radius:50%;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+    .badge-icon{
+
+        gap:6px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .badge-icon i,
+    .badge-icon svg{
+
+        width:13px;
+
+        height:13px;
+
+        font-size:13px;
+
+    }
+
+}
+
+/* ==========================================
+   MODULE 7 - DOT BADGES
+========================================== */
+
+/* ===========================
+   DOT BADGE
+=========================== */
+
+.badge-dot{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+.badge-dot::before{
+
+    content:"";
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    background:currentColor;
+
+    flex-shrink:0;
+
+}
+
+/* ===========================
+   DOT ONLY
+=========================== */
+
+.badge-dot-only{
+
+    display:inline-block;
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    background:currentColor;
+
+    flex-shrink:0;
+
+}
+
+/* ===========================
+   DOT SIZES
+=========================== */
+
+.badge-dot-xs::before,
+.badge-dot-only.badge-dot-xs{
+
+    width:6px;
+
+    height:6px;
+
+}
+
+.badge-dot-sm::before,
+.badge-dot-only.badge-dot-sm{
+
+    width:8px;
+
+    height:8px;
+
+}
+
+.badge-dot-lg::before,
+.badge-dot-only.badge-dot-lg{
+
+    width:12px;
+
+    height:12px;
+
+}
+
+.badge-dot-xl::before,
+.badge-dot-only.badge-dot-xl{
+
+    width:16px;
+
+    height:16px;
+
+}
+
+/* ===========================
+   STATUS COLORS
+=========================== */
+
+.badge-dot-success{
+
+    color:var(--color-success);
+
+}
+
+.badge-dot-danger{
+
+    color:var(--color-danger);
+
+}
+
+.badge-dot-warning{
+
+    color:var(--color-warning);
+
+}
+
+.badge-dot-info{
+
+    color:var(--color-primary);
+
+}
+
+.badge-dot-neutral{
+
+    color:var(--color-gray-500);
+
+}
+
+/* ===========================
+   OUTLINE DOT
+=========================== */
+
+.badge-dot-outline::before,
+
+.badge-dot-only.badge-dot-outline{
+
+    background:transparent;
+
+    border:2px solid currentColor;
+
+}
+
+/* ===========================
+   PULSE DOT
+=========================== */
+
+.badge-dot-pulse::before,
+
+.badge-dot-only.badge-dot-pulse{
+
+    animation:badgeDotPulse 1.8s ease-in-out infinite;
+
+}
+
+@keyframes badgeDotPulse{
+
+    0%{
+
+        transform:scale(1);
+
+        box-shadow:0 0 0 0 currentColor;
+
+    }
+
+    70%{
+
+        transform:scale(1.1);
+
+        box-shadow:0 0 0 8px transparent;
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+        box-shadow:0 0 0 0 transparent;
+
+    }
+
+}
+
+/* ===========================
+   AVATAR INDICATOR
+=========================== */
+
+.badge-avatar-indicator{
+
+    position:absolute;
+
+    right:2px;
+
+    bottom:2px;
+
+    width:12px;
+
+    height:12px;
+
+    border:2px solid var(--color-white);
+
+    border-radius:50%;
+
+    background:var(--color-success);
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+    .badge-dot{
+
+        gap:6px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .badge-dot::before{
+
+        width:8px;
+
+        height:8px;
+
+    }
+
+}/* ==========================================
+   MODULE 8 - PILL & ROUNDED BADGES
+========================================== */
+
+/* ===========================
+   PILL BADGE
+=========================== */
+
+.badge-pill{
+
+    border-radius:999px;
+
+    padding-inline:14px;
+
+}
+
+/* ===========================
+   CAPSULE BADGE
+=========================== */
+
+.badge-capsule{
+
+    border-radius:999px;
+
+    min-height:32px;
+
+    padding:6px 16px;
+
+}
+
+/* ===========================
+   ROUNDED BADGE
+=========================== */
+
+.badge-rounded{
+
+    border-radius:var(--radius-2xl);
+
+}
+
+/* ===========================
+   SQUARE BADGE
+=========================== */
+
+.badge-square{
+
+    border-radius:var(--radius-sm);
+
+}
+
+/* ===========================
+   CIRCLE BADGE
+=========================== */
+
+.badge-circle{
+
+    width:34px;
+
+    height:34px;
+
+    min-width:34px;
+
+    padding:0;
+
+    border-radius:50%;
+
+}
+
+.badge-circle.badge-sm{
+
+    width:28px;
+
+    height:28px;
+
+    min-width:28px;
+
+}
+
+.badge-circle.badge-lg{
+
+    width:42px;
+
+    height:42px;
+
+    min-width:42px;
+
+}
+
+.badge-circle.badge-xl{
+
+    width:50px;
+
+    height:50px;
+
+    min-width:50px;
+
+}
+
+/* ===========================
+   RECTANGLE
+=========================== */
+
+.badge-rectangle{
+
+    border-radius:var(--radius-md);
+
+    min-width:48px;
+
+}
+
+/* ===========================
+   WIDE BADGE
+=========================== */
+
+.badge-wide{
+
+    padding-inline:18px;
+
+}
+
+/* ===========================
+   COMPACT BADGE
+=========================== */
+
+.badge-compact{
+
+    padding-inline:8px;
+
+}
+
+/* ===========================
+   FLOATING SHAPE
+=========================== */
+
+.badge-floating{
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+    .badge-circle.badge-xl{
+
+        width:46px;
+
+        height:46px;
+
+        min-width:46px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .badge-pill{
+
+        padding-inline:12px;
+
+    }
+
+    .badge-capsule{
+
+        padding:5px 14px;
+
+    }
+
+}
+
+/* ==========================================
+   MODULE 9 - GRADIENT BADGES
+========================================== */
+
+/* ===========================
+   BASE GRADIENT
+=========================== */
+
+.badge-gradient{
+
+    color:var(--color-white);
+
+    border:none;
+
+    background:linear-gradient(
+        135deg,
+        var(--color-primary),
+        var(--color-primary-dark)
+    );
+
+}
+
+/* ===========================
+   SUCCESS GRADIENT
+=========================== */
+
+.badge-gradient-success{
+
+    color:var(--color-white);
+
+    background:linear-gradient(
+        135deg,
+        #22c55e,
+        #16a34a
+    );
+
+}
+
+/* ===========================
+   DANGER GRADIENT
+=========================== */
+
+.badge-gradient-danger{
+
+    color:var(--color-white);
+
+    background:linear-gradient(
+        135deg,
+        #ef4444,
+        #b91c1c
+    );
+
+}
+
+/* ===========================
+   WARNING GRADIENT
+=========================== */
+
+.badge-gradient-warning{
+
+    color:#1f2937;
+
+    background:linear-gradient(
+        135deg,
+        #fbbf24,
+        #f59e0b
+    );
+
+}
+
+/* ===========================
+   INFO GRADIENT
+=========================== */
+
+.badge-gradient-info{
+
+    color:var(--color-white);
+
+    background:linear-gradient(
+        135deg,
+        #3b82f6,
+        #2563eb
+    );
+
+}
+
+/* ===========================
+   PURPLE GRADIENT
+=========================== */
+
+.badge-gradient-purple{
+
+    color:var(--color-white);
+
+    background:linear-gradient(
+        135deg,
+        #8b5cf6,
+        #6d28d9
+    );
+
+}
+
+/* ===========================
+   SUNSET
+=========================== */
+
+.badge-gradient-sunset{
+
+    color:var(--color-white);
+
+    background:linear-gradient(
+        135deg,
+        #f97316,
+        #ec4899
+    );
+
+}
+
+/* ===========================
+   OCEAN
+=========================== */
+
+.badge-gradient-ocean{
+
+    color:var(--color-white);
+
+    background:linear-gradient(
+        135deg,
+        #06b6d4,
+        #2563eb
+    );
+
+}
+
+/* ===========================
+   GLASS
+=========================== */
+
+.badge-gradient-glass{
+
+    color:var(--color-white);
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.2);
+
+}
+
+/* ===========================
+   METALLIC
+=========================== */
+
+.badge-gradient-metal{
+
+    color:#111827;
+
+    background:linear-gradient(
+        135deg,
+        #f8fafc,
+        #cbd5e1,
+        #94a3b8
+    );
+
+}
+
+/* ===========================
+   GOLD
+=========================== */
+
+.badge-gradient-gold{
+
+    color:#3b2f00;
+
+    background:linear-gradient(
+        135deg,
+        #fde68a,
+        #facc15,
+        #d97706
+    );
+
+}
+
+/* ===========================
+   HOVER EFFECT
+=========================== */
+
+.badge-gradient:hover,
+
+.badge-gradient-success:hover,
+
+.badge-gradient-danger:hover,
+
+.badge-gradient-warning:hover,
+
+.badge-gradient-info:hover,
+
+.badge-gradient-purple:hover,
+
+.badge-gradient-sunset:hover,
+
+.badge-gradient-ocean:hover,
+
+.badge-gradient-glass:hover,
+
+.badge-gradient-metal:hover,
+
+.badge-gradient-gold:hover{
+
+    filter:brightness(1.05);
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+    .badge-gradient-glass{
+
+        backdrop-filter:blur(12px);
+
+        -webkit-backdrop-filter:blur(12px);
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .badge-gradient{
+
+        font-size:11px;
+
+    }
+
+}
+
+/* ==========================================
+   MODULE 10 - BADGE GROUPS
+========================================== */
+
+/* ===========================
+   BADGE GROUP
+=========================== */
+
+.badge-group{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:8px;
+
+}
+
+/* ===========================
+   COMPACT GROUP
+=========================== */
+
+.badge-group-compact{
+
+    gap:4px;
+
+}
+
+/* ===========================
+   LARGE GROUP
+=========================== */
+
+.badge-group-lg{
+
+    gap:12px;
+
+}
+
+/* ===========================
+   STACKED GROUP
+=========================== */
+
+.badge-group-stack{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:8px;
+
+}
+
+/* ===========================
+   JUSTIFIED GROUP
+=========================== */
+
+.badge-group-between{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:12px;
+
+}
+
+/* ===========================
+   CENTERED GROUP
+=========================== */
+
+.badge-group-center{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+}
+
+/* ===========================
+   OVERLAPPING BADGES
+=========================== */
+
+.badge-overlap{
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+.badge-overlap .badge{
+
+    margin-left:-8px;
+
+    border:2px solid var(--color-white);
+
+}
+
+.badge-overlap .badge:first-child{
+
+    margin-left:0;
+
+}
+
+/* ===========================
+   TAG LIST
+=========================== */
+
+.badge-tags{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+}
+
+/* ===========================
+   FILTER CHIPS
+=========================== */
+
+.badge-filter{
+
+    cursor:pointer;
+
+    transition:
+        background .3s ease,
+        color .3s ease,
+        transform .3s ease;
+
+}
+
+.badge-filter:hover{
+
+    transform:translateY(-2px);
+
+}
+
+.badge-filter.active{
+
+    background:var(--color-primary);
+
+    color:var(--color-white);
+
+    border-color:var(--color-primary);
+
+}
+
+/* ===========================
+   SCROLLABLE GROUP
+=========================== */
+
+.badge-group-scroll{
+
+    display:flex;
+
+    gap:10px;
+
+    overflow-x:auto;
+
+    scrollbar-width:none;
+
+}
+
+.badge-group-scroll::-webkit-scrollbar{
+
+    display:none;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+    .badge-group{
+
+        gap:6px;
+
+    }
+
+    .badge-group-lg{
+
+        gap:10px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .badge-group-between{
+
+        flex-wrap:wrap;
+
+        justify-content:flex-start;
+
+    }
+
+}
+
+/* ==========================================
+   MODULE 11 - BADGE ANIMATIONS
+========================================== */
+
+/* ===========================
+   FADE IN
+=========================== */
+
+@keyframes badgeFadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.9);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+.badge-fade-in{
+
+    animation:badgeFadeIn .35s ease forwards;
+
+}
+
+/* ===========================
+   PULSE
+=========================== */
+
+@keyframes badgePulse{
+
+    0%,100%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.08);
+
+    }
+
+}
+
+.badge-pulse{
+
+    animation:badgePulse 1.8s ease-in-out infinite;
+
+}
+
+/* ===========================
+   BOUNCE
+=========================== */
+
+@keyframes badgeBounce{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    30%{
+
+        transform:translateY(-6px);
+
+    }
+
+    60%{
+
+        transform:translateY(2px);
+
+    }
+
+}
+
+.badge-bounce{
+
+    animation:badgeBounce .7s ease;
+
+}
+
+/* ===========================
+   SHAKE
+=========================== */
+
+@keyframes badgeShake{
+
+    0%,100%{
+
+        transform:translateX(0);
+
+    }
+
+    20%{
+
+        transform:translateX(-3px);
+
+    }
+
+    40%{
+
+        transform:translateX(3px);
+
+    }
+
+    60%{
+
+        transform:translateX(-2px);
+
+    }
+
+    80%{
+
+        transform:translateX(2px);
+
+    }
+
+}
+
+.badge-shake{
+
+    animation:badgeShake .45s ease;
+
+}
+
+/* ===========================
+   SLIDE UP
+=========================== */
+
+@keyframes badgeSlideUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(12px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.badge-slide-up{
+
+    animation:badgeSlideUp .4s ease forwards;
+
+}
+
+/* ===========================
+   GLOW
+=========================== */
+
+@keyframes badgeGlow{
+
+    0%,100%{
+
+        box-shadow:0 0 0 rgba(59,130,246,0);
+
+    }
+
+    50%{
+
+        box-shadow:0 0 16px rgba(59,130,246,.45);
+
+    }
+
+}
+
+.badge-glow{
+
+    animation:badgeGlow 2s ease-in-out infinite;
+
+}
+
+/* ===========================
+   SHIMMER
+=========================== */
+
+.badge-shimmer{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.badge-shimmer::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+
+        120deg,
+
+        transparent,
+
+        rgba(255,255,255,.45),
+
+        transparent
+
+    );
+
+    transform:translateX(-100%);
+
+    animation:badgeShimmer 2s linear infinite;
+
+}
+
+@keyframes badgeShimmer{
+
+    to{
+
+        transform:translateX(100%);
+
+    }
+
+}
+
+/* ===========================
+   REDUCED MOTION
+=========================== */
+
+@media(prefers-reduced-motion:reduce){
+
+    .badge-fade-in,
+
+    .badge-pulse,
+
+    .badge-bounce,
+
+    .badge-shake,
+
+    .badge-slide-up,
+
+    .badge-glow,
+
+    .badge-shimmer::after{
+
+        animation:none !important;
+
+    }
+
+}
+
+/* ==========================================
+   MODULE 12 - BADGE UTILITY CLASSES
+========================================== */
+
+/* ===========================
+   DISPLAY
+=========================== */
+
+.badge-hidden{
+
+    display:none !important;
+
+}
+
+.badge-inline{
+
+    display:inline-flex !important;
+
+}
+
+.badge-block{
+
+    display:flex !important;
+
+}
+
+.badge-grid{
+
+    display:grid !important;
+
+}
+
+/* ===========================
+   FLEX UTILITIES
+=========================== */
+
+.badge-items-center{
+
+    align-items:center !important;
+
+}
+
+.badge-items-start{
+
+    align-items:flex-start !important;
+
+}
+
+.badge-items-end{
+
+    align-items:flex-end !important;
+
+}
+
+.badge-justify-center{
+
+    justify-content:center !important;
+
+}
+
+.badge-justify-between{
+
+    justify-content:space-between !important;
+
+}
+
+.badge-flex-column{
+
+    flex-direction:column !important;
+
+}
+
+.badge-flex-wrap{
+
+    flex-wrap:wrap !important;
+
+}
+
+/* ===========================
+   WIDTH & HEIGHT
+=========================== */
+
+.badge-w-100{
+
+    width:100% !important;
+
+}
+
+.badge-h-100{
+
+    height:100% !important;
+
+}
+
+.badge-max-content{
+
+    width:max-content !important;
+
+}
+
+/* ===========================
+   POSITION
+=========================== */
+
+.badge-relative{
+
+    position:relative !important;
+
+}
+
+.badge-absolute{
+
+    position:absolute !important;
+
+}
+
+.badge-fixed{
+
+    position:fixed !important;
+
+}
+
+.badge-overflow-hidden{
+
+    overflow:hidden !important;
+
+}
+
+/* ===========================
+   SPACING
+=========================== */
+
+.badge-m-0{
+
+    margin:0 !important;
+
+}
+
+.badge-mt-auto{
+
+    margin-top:auto !important;
+
+}
+
+.badge-p-0{
+
+    padding:0 !important;
+
+}
+
+/* ===========================
+   BORDER & SHADOW
+=========================== */
+
+.badge-rounded-full{
+
+    border-radius:999px !important;
+
+}
+
+.badge-shadow{
+
+    box-shadow:var(--shadow-lg) !important;
+
+}
+
+.badge-shadow-none{
+
+    box-shadow:none !important;
+
+}
+
+/* ===========================
+   VISIBILITY
+=========================== */
+
+.badge-visible{
+
+    visibility:visible !important;
+
+    opacity:1 !important;
+
+}
+
+.badge-invisible{
+
+    visibility:hidden !important;
+
+    opacity:0 !important;
+
+}
+
+/* ===========================
+   CURSOR
+=========================== */
+
+.badge-pointer{
+
+    cursor:pointer !important;
+
+}
+
+.badge-disabled{
+
+    pointer-events:none !important;
+
+    opacity:.6 !important;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+    .badge-mobile-hidden{
+
+        display:none !important;
+
+    }
+
+    .badge-mobile-center{
+
+        justify-content:center !important;
+
+        text-align:center !important;
+
+    }
+
+}
+
+@media(min-width:769px){
+
+    .badge-desktop-hidden{
+
+        display:none !important;
+
+    }
+
+}
+
+/* ==========================================
+   MODULE 13 - BADGE ACCESSIBILITY
+========================================== */
+
+/* ===========================
+   KEYBOARD FOCUS
+=========================== */
+
+.badge:focus-visible{
+
+    outline:3px solid var(--color-primary);
+
+    outline-offset:3px;
+
+}
+
+.badge[tabindex],
+
+.badge[role="button"],
+
+.badge-pointer{
+
+    cursor:pointer;
+
+}
+
+/* ===========================
+   INTERACTIVE STATES
+=========================== */
+
+.badge[role="button"]:hover,
+
+.badge[role="button"]:focus-visible,
+
+.badge-pointer:hover{
+
+    transform:translateY(-2px);
+
+}
+
+.badge[role="button"]:active,
+
+.badge-pointer:active{
+
+    transform:scale(.96);
+
+}
+
+/* ===========================
+   TOUCH TARGET
+=========================== */
+
+.badge-touch{
+
+    min-width:44px;
+
+    min-height:44px;
+
+}
+
+/* ===========================
+   SCREEN READER ONLY
+=========================== */
+
+.badge-sr-only{
+
+    position:absolute;
+
+    width:1px;
+
+    height:1px;
+
+    padding:0;
+
+    margin:-1px;
+
+    overflow:hidden;
+
+    clip:rect(0,0,0,0);
+
+    white-space:nowrap;
+
+    border:0;
+
+}
+
+.badge-sr-only-focusable:focus,
+
+.badge-sr-only-focusable:active{
+
+    position:static;
+
+    width:auto;
+
+    height:auto;
+
+    margin:0;
+
+    overflow:visible;
+
+    clip:auto;
+
+    white-space:normal;
+
+}
+
+/* ===========================
+   HIGH CONTRAST
+=========================== */
+
+@media (prefers-contrast:more){
+
+    .badge{
+
+        border-width:2px;
+
+        box-shadow:none;
+
+    }
+
+}
+
+/* ===========================
+   FORCED COLORS
+=========================== */
+
+@media (forced-colors:active){
+
+    .badge{
+
+        background:Canvas;
+
+        color:CanvasText;
+
+        border:2px solid CanvasText;
+
+        forced-color-adjust:auto;
+
+    }
+
+}
+
+/* ===========================
+   REDUCED TRANSPARENCY
+=========================== */
+
+@media (prefers-reduced-transparency:reduce){
+
+    .badge-gradient-glass{
+
+        backdrop-filter:none;
+
+        -webkit-backdrop-filter:none;
+
+        background:rgba(255,255,255,.95);
+
+    }
+
+}
+
+/* ===========================
+   REDUCED MOTION
+=========================== */
+
+@media (prefers-reduced-motion:reduce){
+
+    .badge,
+
+    .badge::before,
+
+    .badge::after{
+
+        animation:none !important;
+
+        transition:none !important;
+
+        transform:none !important;
+
+    }
+
+}
+
+/* ===========================
+   TEXT SELECTION
+=========================== */
+
+.badge{
+
+    user-select:none;
+
+}
+
+.badge-selectable{
+
+    user-select:text;
+
+}
+
+/* ==========================================
+   MODULE 14 - BADGE THEMES
+========================================== */
+
+/* ===========================
+   LIGHT THEME
+=========================== */
+
+.badge-theme-light{
+
+    background:var(--color-white);
+
+    color:var(--color-gray-800);
+
+    border:1px solid rgba(15,23,42,.08);
+
+}
+
+/* ===========================
+   DARK THEME
+=========================== */
+
+.badge-theme-dark{
+
+    background:var(--color-gray-900);
+
+    color:var(--color-white);
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+/* ===========================
+   GLASS THEME
+=========================== */
+
+.badge-theme-glass{
+
+    background:rgba(255,255,255,.14);
+
+    color:var(--color-white);
+
+    border:1px solid rgba(255,255,255,.22);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+}
+
+.badge-theme-glass.badge-theme-dark{
+
+    background:rgba(15,23,42,.55);
+
+}
+
+/* ===========================
+   SOFT THEME
+=========================== */
+
+.badge-theme-soft{
+
+    box-shadow:none;
+
+    border-color:transparent;
+
+}
+
+/* ===========================
+   ELEVATED THEME
+=========================== */
+
+.badge-theme-elevated{
+
+    box-shadow:var(--shadow-xl);
+
+}
+
+/* ===========================
+   BORDERED THEME
+=========================== */
+
+.badge-theme-bordered{
+
+    background:transparent;
+
+    color:inherit;
+
+    border:2px solid currentColor;
+
+}
+
+/* ===========================
+   TRANSPARENT THEME
+=========================== */
+
+.badge-theme-transparent{
+
+    background:transparent;
+
+    color:inherit;
+
+    box-shadow:none;
+
+}
+
+/* ===========================
+   NEON THEME
+=========================== */
+
+.badge-theme-neon{
+
+    background:var(--color-primary);
+
+    color:var(--color-white);
+
+    box-shadow:0 0 12px rgba(59,130,246,.45);
+
+}
+
+/* ===========================
+   METALLIC THEME
+=========================== */
+
+.badge-theme-metallic{
+
+    background:linear-gradient(
+        135deg,
+        #f8fafc,
+        #d1d5db,
+        #9ca3af
+    );
+
+    color:#111827;
+
+    border:1px solid rgba(255,255,255,.4);
+
+}
+
+/* ===========================
+   GOLD THEME
+=========================== */
+
+.badge-theme-gold{
+
+    background:linear-gradient(
+        135deg,
+        #fde68a,
+        #fbbf24,
+        #d97706
+    );
+
+    color:#4b3200;
+
+}
+
+/* ===========================
+   HOVER EFFECT
+=========================== */
+
+.badge-theme-light:hover,
+
+.badge-theme-dark:hover,
+
+.badge-theme-glass:hover,
+
+.badge-theme-neon:hover,
+
+.badge-theme-metallic:hover,
+
+.badge-theme-gold:hover{
+
+    filter:brightness(1.04);
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+    .badge-theme-glass{
+
+        backdrop-filter:blur(12px);
+
+        -webkit-backdrop-filter:blur(12px);
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .badge-theme-elevated{
+
+        box-shadow:var(--shadow-lg);
+
+    }
+
+}
+
+/* ==========================================
+   MODULE 15 - GLOBAL RESPONSIVE
+========================================== */
+
+/* ===========================
+   LARGE DESKTOP
+=========================== */
+
+@media (min-width:1600px){
+
+    .badge{
+
+        font-size:13px;
+
+        min-height:30px;
+
+    }
+
+}
+
+/* ===========================
+   DESKTOP
+=========================== */
+
+@media (max-width:1400px){
+
+    .badge{
+
+        padding:4px 10px;
+
+    }
+
+}
+
+/* ===========================
+   LAPTOP
+=========================== */
+
+@media (max-width:1200px){
+
+    .badge-group{
+
+        gap:6px;
+
+    }
+
+}
+
+/* ===========================
+   TABLET
+=========================== */
+
+@media (max-width:992px){
+
+    .badge{
+
+        gap:6px;
+
+    }
+
+    .badge-group{
+
+        flex-wrap:wrap;
+
+    }
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width:768px){
+
+    .badge{
+
+        min-height:26px;
+
+        padding:4px 8px;
+
+        font-size:11px;
+
+    }
+
+    .badge-group{
+
+        gap:5px;
+
+    }
+
+    .badge-overlap .badge{
+
+        margin-left:-6px;
+
+    }
+
+}
+
+/* ===========================
+   SMALL MOBILE
+=========================== */
+
+@media (max-width:576px){
+
+    .badge{
+
+        min-width:22px;
+
+        border-radius:var(--radius-md);
+
+    }
+
+    .badge-circle{
+
+        width:30px;
+
+        height:30px;
+
+        min-width:30px;
+
+    }
+
+}
+
+/* ===========================
+   EXTRA SMALL DEVICES
+=========================== */
+
+@media (max-width:400px){
+
+    .badge{
+
+        font-size:10px;
+
+        padding:3px 7px;
+
+    }
+
+    .badge-group{
+
+        gap:4px;
+
+    }
+
+}
+
+/* ===========================
+   LANDSCAPE
+=========================== */
+
+@media (max-height:500px) and (orientation:landscape){
+
+    .badge-group-scroll{
+
+        max-height:80vh;
+
+        overflow:auto;
+
+    }
+
+}
+
+/* ===========================
+   TOUCH DEVICES
+=========================== */
+
+@media (hover:none){
+
+    .badge:hover{
+
+        transform:none;
+
+    }
+
+}
+
+/* ===========================
+   PRINT
+=========================== */
+
+@media print{
+
+    .badge{
+
+        background:#fff !important;
+
+        color:#000 !important;
+
+        border:1px solid #000 !important;
+
+        box-shadow:none !important;
+
+        animation:none !important;
+
+    }
+
+}
+
+/* ===========================
+   REDUCED MOTION
+=========================== */
+
+@media (prefers-reduced-motion:reduce){
+
+    .badge,
+
+    .badge::before,
+
+    .badge::after{
+
+        animation:none !important;
+
+        transition:none !important;
+
+        scroll-behavior:auto !important;
+
+    }
+
+}
