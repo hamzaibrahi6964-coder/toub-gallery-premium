@@ -1,0 +1,3044 @@
+/* ==========================================
+   MODULE 1 - TABLE BASE
+========================================== */
+
+/* ===========================
+   TABLE WRAPPER
+=========================== */
+
+.table-wrapper{
+
+    position:relative;
+
+    width:100%;
+
+    overflow-x:auto;
+
+    overflow-y:hidden;
+
+    border-radius:var(--radius-xl);
+
+    background:var(--color-white);
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+/* ===========================
+   TABLE
+=========================== */
+
+.table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    border-spacing:0;
+
+    min-width:720px;
+
+    background:transparent;
+
+    color:var(--color-gray-800);
+
+    font-size:14px;
+
+    line-height:1.5;
+
+}
+
+/* ===========================
+   ROWS
+=========================== */
+
+.table tr{
+
+    transition:
+
+        background .25s ease,
+
+        color .25s ease;
+
+}
+
+/* ===========================
+   CELLS
+=========================== */
+
+.table th,
+
+.table td{
+
+    padding:16px 18px;
+
+    text-align:left;
+
+    vertical-align:middle;
+
+    border-bottom:1px solid rgba(15,23,42,.08);
+
+}
+
+/* ===========================
+   LAST ROW
+=========================== */
+
+.table tbody tr:last-child td{
+
+    border-bottom:none;
+
+}
+
+/* ===========================
+   CAPTION
+=========================== */
+
+.table caption{
+
+    caption-side:top;
+
+    text-align:left;
+
+    padding:16px 18px;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    color:var(--color-gray-900);
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+    .table{
+
+        min-width:640px;
+
+    }
+
+    .table th,
+
+    .table td{
+
+        padding:14px 16px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .table{
+
+        font-size:13px;
+
+        min-width:560px;
+
+    }
+
+}
+
+/* ==========================================
+   MODULE 2 - TABLE HEADER
+========================================== */
+
+/* ===========================
+   TABLE HEAD
+=========================== */
+
+.table thead{
+
+    background:var(--color-gray-50);
+
+}
+
+/* ===========================
+   HEADER CELLS
+=========================== */
+
+.table thead th{
+
+    position:relative;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    letter-spacing:.04em;
+
+    text-transform:uppercase;
+
+    color:var(--color-gray-700);
+
+    white-space:nowrap;
+
+    background:inherit;
+
+    border-bottom:2px solid rgba(15,23,42,.08);
+
+}
+
+/* ===========================
+   SORTABLE HEADERS
+=========================== */
+
+.table-sort{
+
+    cursor:pointer;
+
+    user-select:none;
+
+    transition:
+
+        color .25s ease,
+
+        background .25s ease;
+
+}
+
+.table-sort:hover{
+
+    color:var(--color-primary);
+
+    background:rgba(59,130,246,.05);
+
+}
+
+/* ===========================
+   SORT ICON
+=========================== */
+
+.table-sort-icon{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin-left:8px;
+
+    font-size:12px;
+
+    opacity:.55;
+
+    transition:
+
+        opacity .25s ease,
+
+        transform .25s ease;
+
+}
+
+.table-sort:hover .table-sort-icon{
+
+    opacity:1;
+
+}
+
+.table-sort-asc .table-sort-icon{
+
+    transform:rotate(180deg);
+
+    opacity:1;
+
+}
+
+.table-sort-desc .table-sort-icon{
+
+    transform:rotate(0deg);
+
+    opacity:1;
+
+}
+
+/* ===========================
+   ACTIVE HEADER
+=========================== */
+
+.table thead th.active{
+
+    color:var(--color-primary);
+
+}
+
+/* ===========================
+   HEADER CHECKBOX
+=========================== */
+
+.table-select-all{
+
+    width:40px;
+
+    text-align:center;
+
+}
+
+/* ===========================
+   STICKY HEADER SUPPORT
+=========================== */
+
+.table thead th{
+
+    z-index:2;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+    .table thead th{
+
+        font-size:12px;
+
+        padding:14px 16px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .table-sort-icon{
+
+        margin-left:6px;
+
+        font-size:11px;
+
+    }
+
+}
+
+/* ==========================================
+   MODULE 3 - TABLE BODY
+========================================== */
+
+/* ===========================
+   TABLE BODY
+=========================== */
+
+.table tbody{
+
+    background:var(--color-white);
+
+}
+
+/* ===========================
+   ROW HOVER
+=========================== */
+
+.table tbody tr{
+
+    transition:
+        background .25s ease,
+        color .25s ease,
+        transform .2s ease;
+
+}
+
+.table tbody tr:hover{
+
+    background:rgba(59,130,246,.05);
+
+}
+
+/* ===========================
+   ZEBRA STRIPES
+=========================== */
+
+.table-striped tbody tr:nth-child(even){
+
+    background:rgba(15,23,42,.02);
+
+}
+
+.table-striped tbody tr:nth-child(even):hover{
+
+    background:rgba(59,130,246,.06);
+
+}
+
+/* ===========================
+   CLICKABLE ROW
+=========================== */
+
+.table-row-clickable{
+
+    cursor:pointer;
+
+}
+
+.table-row-clickable:active{
+
+    transform:scale(.998);
+
+}
+
+/* ===========================
+   SELECTED ROW
+=========================== */
+
+.table-row-selected{
+
+    background:rgba(59,130,246,.10) !important;
+
+    border-left:4px solid var(--color-primary);
+
+}
+
+/* ===========================
+   ROW STATES
+=========================== */
+
+.table-row-success{
+
+    background:rgba(34,197,94,.08);
+
+}
+
+.table-row-warning{
+
+    background:rgba(245,158,11,.08);
+
+}
+
+.table-row-danger{
+
+    background:rgba(239,68,68,.08);
+
+}
+
+.table-row-info{
+
+    background:rgba(59,130,246,.08);
+
+}
+
+/* ===========================
+   EXPANDED ROW
+=========================== */
+
+.table-row-expanded{
+
+    background:rgba(99,102,241,.06);
+
+}
+
+.table-row-expanded td{
+
+    border-bottom:none;
+
+}
+
+/* ===========================
+   MULTI-LINE CONTENT
+=========================== */
+
+.table td{
+
+    word-break:break-word;
+
+}
+
+.table td small{
+
+    display:block;
+
+    margin-top:4px;
+
+    color:var(--color-gray-500);
+
+    font-size:12px;
+
+}
+
+/* ===========================
+   CELL ALIGNMENT
+=========================== */
+
+.table td.text-center{
+
+    text-align:center;
+
+}
+
+.table td.text-right{
+
+    text-align:right;
+
+}
+
+.table td.text-nowrap{
+
+    white-space:nowrap;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+    .table td{
+
+        padding:14px 16px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .table td{
+
+        font-size:13px;
+
+    }
+
+}
+
+/* ==========================================
+   MODULE 4 - TABLE FOOTER
+========================================== */
+
+/* ===========================
+   TABLE FOOT
+=========================== */
+
+.table tfoot{
+
+    background:var(--color-gray-50);
+
+}
+
+/* ===========================
+   FOOTER CELLS
+=========================== */
+
+.table tfoot th,
+
+.table tfoot td{
+
+    padding:16px 18px;
+
+    font-weight:600;
+
+    color:var(--color-gray-800);
+
+    border-top:2px solid rgba(15,23,42,.08);
+
+    border-bottom:none;
+
+    background:inherit;
+
+}
+
+/* ===========================
+   SUMMARY ROW
+=========================== */
+
+.table-summary{
+
+    font-weight:700;
+
+    background:rgba(59,130,246,.06);
+
+}
+
+.table-summary td,
+
+.table-summary th{
+
+    color:var(--color-primary);
+
+}
+
+/* ===========================
+   TOTAL ROW
+=========================== */
+
+.table-total{
+
+    font-weight:700;
+
+    background:rgba(15,23,42,.04);
+
+}
+
+.table-total td,
+
+.table-total th{
+
+    font-size:15px;
+
+}
+
+/* ===========================
+   FOOTER ACTIONS
+=========================== */
+
+.table-footer-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:flex-end;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+
+}
+
+/* ===========================
+   STICKY FOOTER
+=========================== */
+
+.table-footer-sticky{
+
+    position:sticky;
+
+    bottom:0;
+
+    z-index:2;
+
+    background:var(--color-white);
+
+    box-shadow:0 -2px 8px rgba(0,0,0,.06);
+
+}
+
+/* ===========================
+   NUMERIC CELLS
+=========================== */
+
+.table tfoot .table-number{
+
+    text-align:right;
+
+    font-variant-numeric:tabular-nums;
+
+}
+
+/* ===========================
+   FOOTER LABEL
+=========================== */
+
+.table-footer-label{
+
+    color:var(--color-gray-600);
+
+    font-weight:600;
+
+}
+
+/* ===========================
+   FOOTER VALUE
+=========================== */
+
+.table-footer-value{
+
+    font-weight:700;
+
+    color:var(--color-gray-900);
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+    .table tfoot th,
+
+    .table tfoot td{
+
+        padding:14px 16px;
+
+    }
+
+    .table-footer-actions{
+
+        justify-content:flex-start;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .table-total td,
+
+    .table-total th{
+
+        font-size:14px;
+
+    }
+
+}
+
+/* ==========================================
+   MODULE 5 - TABLE VARIANTS
+========================================== */
+
+/* ===========================
+   BORDERED TABLE
+=========================== */
+
+.table-bordered{
+
+    border:1px solid rgba(15,23,42,.08);
+
+}
+
+.table-bordered th,
+
+.table-bordered td{
+
+    border:1px solid rgba(15,23,42,.08);
+
+}
+
+/* ===========================
+   BORDERLESS TABLE
+=========================== */
+
+.table-borderless{
+
+    border:none;
+
+}
+
+.table-borderless th,
+
+.table-borderless td{
+
+    border:none;
+
+}
+
+/* ===========================
+   STRIPED TABLE
+=========================== */
+
+.table-striped tbody tr:nth-child(even){
+
+    background:rgba(15,23,42,.03);
+
+}
+
+/* ===========================
+   HOVERABLE TABLE
+=========================== */
+
+.table-hover tbody tr{
+
+    transition:
+
+        background .25s ease,
+
+        transform .2s ease,
+
+        box-shadow .25s ease;
+
+}
+
+.table-hover tbody tr:hover{
+
+    background:rgba(59,130,246,.06);
+
+    box-shadow:inset 4px 0 0 var(--color-primary);
+
+}
+
+/* ===========================
+   COMPACT TABLE
+=========================== */
+
+.table-compact th,
+
+.table-compact td{
+
+    padding:10px 12px;
+
+    font-size:13px;
+
+}
+
+/* ===========================
+   SPACIOUS TABLE
+=========================== */
+
+.table-spacious th,
+
+.table-spacious td{
+
+    padding:20px 24px;
+
+}
+
+/* ===========================
+   ROUNDED TABLE
+=========================== */
+
+.table-rounded{
+
+    overflow:hidden;
+
+    border-radius:var(--radius-xl);
+
+}
+
+/* ===========================
+   MODERN TABLE
+=========================== */
+
+.table-modern{
+
+    border-collapse:separate;
+
+    border-spacing:0 8px;
+
+}
+
+.table-modern tbody tr{
+
+    background:var(--color-white);
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+.table-modern tbody td:first-child{
+
+    border-radius:var(--radius-lg) 0 0 var(--radius-lg);
+
+}
+
+.table-modern tbody td:last-child{
+
+    border-radius:0 var(--radius-lg) var(--radius-lg) 0;
+
+}
+
+/* ===========================
+   DENSE TABLE
+=========================== */
+
+.table-dense th,
+
+.table-dense td{
+
+    padding:8px 10px;
+
+    font-size:12px;
+
+}
+
+/* ===========================
+   FIXED LAYOUT
+=========================== */
+
+.table-fixed{
+
+    table-layout:fixed;
+
+}
+
+/* ===========================
+   AUTO LAYOUT
+=========================== */
+
+.table-auto{
+
+    table-layout:auto;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+    .table-spacious th,
+
+    .table-spacious td{
+
+        padding:16px 18px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .table-compact th,
+
+    .table-compact td{
+
+        padding:8px 10px;
+
+    }
+
+}
+
+/* ==========================================
+   MODULE 6 - RESPONSIVE TABLES
+========================================== */
+
+/* ===========================
+   RESPONSIVE WRAPPER
+=========================== */
+
+.table-responsive{
+
+    width:100%;
+
+    overflow-x:auto;
+
+    overflow-y:hidden;
+
+    -webkit-overflow-scrolling:touch;
+
+    scrollbar-width:thin;
+
+}
+
+.table-responsive::-webkit-scrollbar{
+
+    height:8px;
+
+}
+
+.table-responsive::-webkit-scrollbar-thumb{
+
+    background:rgba(148,163,184,.5);
+
+    border-radius:999px;
+
+}
+
+.table-responsive::-webkit-scrollbar-track{
+
+    background:transparent;
+
+}
+
+/* ===========================
+   MOBILE TABLE
+=========================== */
+
+.table-mobile{
+
+    min-width:640px;
+
+}
+
+/* ===========================
+   NO WRAP
+=========================== */
+
+.table-nowrap{
+
+    white-space:nowrap;
+
+}
+
+/* ===========================
+   WRAP CONTENT
+=========================== */
+
+.table-wrap{
+
+    white-space:normal;
+
+    word-break:break-word;
+
+}
+
+/* ===========================
+   HIDE COLUMNS
+=========================== */
+
+.table-hide-mobile{
+
+    display:table-cell;
+
+}
+
+.table-show-mobile{
+
+    display:none;
+
+}
+
+/* ===========================
+   STACKED TABLE
+=========================== */
+
+@media(max-width:768px){
+
+    .table-stack{
+
+        min-width:100%;
+
+    }
+
+    .table-stack thead{
+
+        display:none;
+
+    }
+
+    .table-stack,
+
+    .table-stack tbody,
+
+    .table-stack tr,
+
+    .table-stack td{
+
+        display:block;
+
+        width:100%;
+
+    }
+
+    .table-stack tr{
+
+        margin-bottom:16px;
+
+        border:1px solid rgba(15,23,42,.08);
+
+        border-radius:var(--radius-lg);
+
+        overflow:hidden;
+
+        background:var(--color-white);
+
+        box-shadow:var(--shadow-sm);
+
+    }
+
+    .table-stack td{
+
+        display:flex;
+
+        justify-content:space-between;
+
+        align-items:center;
+
+        gap:16px;
+
+        text-align:right;
+
+        padding:12px 16px;
+
+        border-bottom:1px solid rgba(15,23,42,.06);
+
+    }
+
+    .table-stack td:last-child{
+
+        border-bottom:none;
+
+    }
+
+    .table-stack td::before{
+
+        content:attr(data-label);
+
+        font-weight:600;
+
+        color:var(--color-gray-700);
+
+        text-align:left;
+
+    }
+
+    .table-hide-mobile{
+
+        display:none !important;
+
+    }
+
+    .table-show-mobile{
+
+        display:table-cell;
+
+    }
+
+}
+
+/* ===========================
+   SMALL MOBILE
+=========================== */
+
+@media(max-width:480px){
+
+    .table-stack td{
+
+        padding:10px 14px;
+
+        font-size:13px;
+
+    }
+
+}
+
+/* ==========================================
+   MODULE 7 - STICKY HEADER & COLUMNS
+========================================== */
+
+/* ===========================
+   STICKY HEADER
+=========================== */
+
+.table-sticky-header{
+
+    position:relative;
+
+}
+
+.table-sticky-header thead th{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:30;
+
+    background:var(--color-white);
+
+    box-shadow:0 2px 0 rgba(15,23,42,.06);
+
+}
+
+/* ===========================
+   STICKY FIRST COLUMN
+=========================== */
+
+.table-sticky-first th:first-child,
+
+.table-sticky-first td:first-child{
+
+    position:sticky;
+
+    left:0;
+
+    z-index:20;
+
+    background:inherit;
+
+    box-shadow:2px 0 6px rgba(15,23,42,.06);
+
+}
+
+/* Ensure the top-left header stays above all */
+
+.table-sticky-first thead th:first-child{
+
+    z-index:40;
+
+}
+
+/* ===========================
+   STICKY LAST COLUMN
+=========================== */
+
+.table-sticky-last th:last-child,
+
+.table-sticky-last td:last-child{
+
+    position:sticky;
+
+    right:0;
+
+    z-index:20;
+
+    background:inherit;
+
+    box-shadow:-2px 0 6px rgba(15,23,42,.06);
+
+}
+
+.table-sticky-last thead th:last-child{
+
+    z-index:40;
+
+}
+
+/* ===========================
+   STICKY FOOTER
+=========================== */
+
+.table-sticky-footer tfoot td,
+
+.table-sticky-footer tfoot th{
+
+    position:sticky;
+
+    bottom:0;
+
+    z-index:25;
+
+    background:var(--color-white);
+
+    box-shadow:0 -2px 6px rgba(15,23,42,.06);
+
+}
+
+/* ===========================
+   FROZEN ROW
+=========================== */
+
+.table-row-frozen{
+
+    position:sticky;
+
+    top:48px;
+
+    z-index:18;
+
+    background:var(--color-gray-50);
+
+}
+
+/* ===========================
+   SHADOW HELPERS
+=========================== */
+
+.table-shadow-left{
+
+    box-shadow:2px 0 8px rgba(15,23,42,.08);
+
+}
+
+.table-shadow-right{
+
+    box-shadow:-2px 0 8px rgba(15,23,42,.08);
+
+}
+
+/* ===========================
+   SCROLL CONTAINER
+=========================== */
+
+.table-scroll{
+
+    overflow:auto;
+
+    max-width:100%;
+
+    max-height:600px;
+
+    scroll-behavior:smooth;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+    .table-sticky-first th:first-child,
+
+    .table-sticky-first td:first-child,
+
+    .table-sticky-last th:last-child,
+
+    .table-sticky-last td:last-child{
+
+        box-shadow:none;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .table-scroll{
+
+        max-height:420px;
+
+    }
+
+}
+
+/* ==========================================
+   MODULE 8 - TABLE ACTIONS
+========================================== */
+
+/* ===========================
+   ACTION COLUMN
+=========================== */
+
+.table-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:flex-end;
+
+    gap:8px;
+
+    flex-wrap:nowrap;
+
+    white-space:nowrap;
+
+}
+
+/* ===========================
+   ACTION GROUP
+=========================== */
+
+.table-action-group{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:6px;
+
+}
+
+/* ===========================
+   ICON ACTION
+=========================== */
+
+.table-action{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:36px;
+
+    height:36px;
+
+    border:none;
+
+    border-radius:var(--radius-md);
+
+    background:transparent;
+
+    color:var(--color-gray-600);
+
+    cursor:pointer;
+
+    transition:
+        background .25s ease,
+        color .25s ease,
+        transform .2s ease;
+
+}
+
+.table-action:hover{
+
+    background:rgba(59,130,246,.08);
+
+    color:var(--color-primary);
+
+    transform:translateY(-1px);
+
+}
+
+.table-action:active{
+
+    transform:scale(.96);
+
+}
+
+/* ===========================
+   ACTION VARIANTS
+=========================== */
+
+.table-action-edit:hover{
+
+    color:var(--color-primary);
+
+}
+
+.table-action-view:hover{
+
+    color:var(--color-success);
+
+}
+
+.table-action-delete:hover{
+
+    color:var(--color-danger);
+
+}
+
+.table-action-warning:hover{
+
+    color:var(--color-warning);
+
+}
+
+/* ===========================
+   ACTION MENU
+=========================== */
+
+.table-action-menu{
+
+    position:relative;
+
+    display:inline-flex;
+
+}
+
+.table-action-dropdown{
+
+    position:absolute;
+
+    top:calc(100% + 8px);
+
+    right:0;
+
+    min-width:180px;
+
+    padding:8px;
+
+    border:1px solid rgba(15,23,42,.08);
+
+    border-radius:var(--radius-lg);
+
+    background:var(--color-white);
+
+    box-shadow:var(--shadow-lg);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transform:translateY(8px);
+
+    transition:
+        opacity .25s ease,
+        transform .25s ease,
+        visibility .25s ease;
+
+    z-index:100;
+
+}
+
+.table-action-menu:hover .table-action-dropdown,
+
+.table-action-menu:focus-within .table-action-dropdown{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translateY(0);
+
+}
+
+/* ===========================
+   BULK ACTION BAR
+=========================== */
+
+.table-bulk-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:12px;
+
+    padding:12px 16px;
+
+    border-bottom:1px solid rgba(15,23,42,.08);
+
+    background:var(--color-gray-50);
+
+}
+
+/* ===========================
+   ROW SELECT
+=========================== */
+
+.table-select{
+
+    width:40px;
+
+    text-align:center;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+    .table-actions{
+
+        gap:6px;
+
+    }
+
+    .table-action{
+
+        width:32px;
+
+        height:32px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .table-action-dropdown{
+
+        min-width:160px;
+
+    }
+
+}
+
+/* ==========================================
+   MODULE 9 - PAGINATION
+========================================== */
+
+/* ===========================
+   PAGINATION WRAPPER
+=========================== */
+
+.table-pagination{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:16px;
+
+    flex-wrap:wrap;
+
+    padding:16px 20px;
+
+    border-top:1px solid rgba(15,23,42,.08);
+
+    background:var(--color-white);
+
+}
+
+/* ===========================
+   PAGINATION INFO
+=========================== */
+
+.table-pagination-info{
+
+    font-size:14px;
+
+    color:var(--color-gray-600);
+
+}
+
+/* ===========================
+   PAGE LIST
+=========================== */
+
+.table-pagination-list{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    list-style:none;
+
+    margin:0;
+
+    padding:0;
+
+}
+
+/* ===========================
+   PAGE BUTTON
+=========================== */
+
+.table-page{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-width:38px;
+
+    height:38px;
+
+    padding:0 12px;
+
+    border:1px solid rgba(15,23,42,.08);
+
+    border-radius:var(--radius-md);
+
+    background:var(--color-white);
+
+    color:var(--color-gray-700);
+
+    text-decoration:none;
+
+    cursor:pointer;
+
+    transition:
+        background .25s ease,
+        color .25s ease,
+        border-color .25s ease,
+        transform .2s ease;
+
+}
+
+.table-page:hover{
+
+    background:rgba(59,130,246,.06);
+
+    border-color:var(--color-primary);
+
+    color:var(--color-primary);
+
+    transform:translateY(-1px);
+
+}
+
+.table-page:active{
+
+    transform:scale(.97);
+
+}
+
+/* ===========================
+   ACTIVE PAGE
+=========================== */
+
+.table-page.active{
+
+    background:var(--color-primary);
+
+    border-color:var(--color-primary);
+
+    color:var(--color-white);
+
+}
+
+/* ===========================
+   DISABLED PAGE
+=========================== */
+
+.table-page.disabled{
+
+    opacity:.45;
+
+    cursor:not-allowed;
+
+    pointer-events:none;
+
+}
+
+/* ===========================
+   PAGE SIZE
+=========================== */
+
+.table-page-size{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+.table-page-size select{
+
+    min-width:80px;
+
+}
+
+/* ===========================
+   RESULTS COUNTER
+=========================== */
+
+.table-results{
+
+    font-size:13px;
+
+    color:var(--color-gray-500);
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+    .table-pagination{
+
+        justify-content:center;
+
+        text-align:center;
+
+    }
+
+    .table-pagination-list{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .table-page{
+
+        min-width:34px;
+
+        height:34px;
+
+        padding:0 10px;
+
+        font-size:13px;
+
+    }
+
+    .table-pagination{
+
+        padding:14px 16px;
+
+    }
+
+}
+
+/* ==========================================
+   MODULE 10 - EMPTY & LOADING STATES
+========================================== */
+
+/* ===========================
+   EMPTY STATE
+=========================== */
+
+.table-empty{
+
+    padding:48px 24px;
+
+    text-align:center;
+
+    color:var(--color-gray-600);
+
+}
+
+.table-empty-icon{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:72px;
+
+    height:72px;
+
+    margin:0 auto 20px;
+
+    border-radius:50%;
+
+    background:rgba(59,130,246,.08);
+
+    color:var(--color-primary);
+
+    font-size:32px;
+
+}
+
+.table-empty-title{
+
+    margin-bottom:8px;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:var(--color-gray-900);
+
+}
+
+.table-empty-text{
+
+    max-width:480px;
+
+    margin:0 auto;
+
+    line-height:1.6;
+
+}
+
+/* ===========================
+   LOADING OVERLAY
+=========================== */
+
+.table-loading{
+
+    position:relative;
+
+    pointer-events:none;
+
+    opacity:.7;
+
+}
+
+.table-loading::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(255,255,255,.55);
+
+    backdrop-filter:blur(2px);
+
+    z-index:5;
+
+}
+
+/* ===========================
+   LOADING SPINNER
+=========================== */
+
+.table-spinner{
+
+    position:absolute;
+
+    top:50%;
+
+    left:50%;
+
+    width:40px;
+
+    height:40px;
+
+    margin:-20px 0 0 -20px;
+
+    border:4px solid rgba(59,130,246,.15);
+
+    border-top-color:var(--color-primary);
+
+    border-radius:50%;
+
+    animation:tableSpin .8s linear infinite;
+
+    z-index:10;
+
+}
+
+@keyframes tableSpin{
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+/* ===========================
+   SKELETON ROW
+=========================== */
+
+.table-skeleton{
+
+    height:16px;
+
+    border-radius:999px;
+
+    background:linear-gradient(
+        90deg,
+        rgba(226,232,240,.9) 25%,
+        rgba(241,245,249,1) 50%,
+        rgba(226,232,240,.9) 75%
+    );
+
+    background-size:200% 100%;
+
+    animation:tableSkeleton 1.4s infinite linear;
+
+}
+
+@keyframes tableSkeleton{
+
+    from{
+
+        background-position:200% 0;
+
+    }
+
+    to{
+
+        background-position:-200% 0;
+
+    }
+
+}
+
+/* ===========================
+   ERROR STATE
+=========================== */
+
+.table-error{
+
+    padding:40px 24px;
+
+    text-align:center;
+
+    color:var(--color-danger);
+
+}
+
+.table-error-title{
+
+    font-size:18px;
+
+    font-weight:700;
+
+    margin-bottom:8px;
+
+}
+
+.table-error-text{
+
+    color:var(--color-gray-600);
+
+}
+
+/* ===========================
+   RETRY ACTION
+=========================== */
+
+.table-retry{
+
+    margin-top:20px;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+    .table-empty{
+
+        padding:40px 20px;
+
+    }
+
+    .table-empty-icon{
+
+        width:64px;
+
+        height:64px;
+
+        font-size:28px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .table-empty-title{
+
+        font-size:16px;
+
+    }
+
+    .table-spinner{
+
+        width:34px;
+
+        height:34px;
+
+        margin:-17px 0 0 -17px;
+
+    }
+
+}
+
+/* ==========================================
+   MODULE 11 - TABLE ANIMATIONS
+========================================== */
+
+/* ===========================
+   FADE IN
+=========================== */
+
+@keyframes tableFadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(12px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.table-fade-in{
+
+    animation:tableFadeIn .4s ease forwards;
+
+}
+
+/* ===========================
+   ROW APPEAR
+=========================== */
+
+@keyframes tableRowAppear{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(-12px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+.table tbody tr.table-row-animate{
+
+    animation:tableRowAppear .35s ease forwards;
+
+}
+
+/* ===========================
+   EXPAND ROW
+=========================== */
+
+@keyframes tableExpand{
+
+    from{
+
+        opacity:0;
+
+        max-height:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+        max-height:1000px;
+
+    }
+
+}
+
+.table-expand{
+
+    overflow:hidden;
+
+    animation:tableExpand .35s ease forwards;
+
+}
+
+/* ===========================
+   COLLAPSE ROW
+=========================== */
+
+@keyframes tableCollapse{
+
+    from{
+
+        opacity:1;
+
+        max-height:1000px;
+
+    }
+
+    to{
+
+        opacity:0;
+
+        max-height:0;
+
+    }
+
+}
+
+.table-collapse{
+
+    overflow:hidden;
+
+    animation:tableCollapse .3s ease forwards;
+
+}
+
+/* ===========================
+   ROW HOVER LIFT
+=========================== */
+
+.table-hover tbody tr{
+
+    transition:
+        background .25s ease,
+        box-shadow .25s ease,
+        transform .2s ease;
+
+}
+
+.table-hover tbody tr:hover{
+
+    transform:translateY(-1px);
+
+}
+
+/* ===========================
+   PULSE HIGHLIGHT
+=========================== */
+
+@keyframes tablePulse{
+
+    0%,100%{
+
+        box-shadow:0 0 0 rgba(59,130,246,0);
+
+    }
+
+    50%{
+
+        box-shadow:0 0 0 4px rgba(59,130,246,.12);
+
+    }
+
+}
+
+.table-highlight{
+
+    animation:tablePulse 1.8s ease-in-out infinite;
+
+}
+
+/* ===========================
+   CELL FADE
+=========================== */
+
+.table-cell-fade{
+
+    transition:
+        opacity .25s ease,
+        background .25s ease;
+
+}
+
+/* ===========================
+   REDUCED MOTION
+=========================== */
+
+@media(prefers-reduced-motion:reduce){
+
+    .table-fade-in,
+
+    .table-row-animate,
+
+    .table-expand,
+
+    .table-collapse,
+
+    .table-highlight{
+
+        animation:none !important;
+
+    }
+
+    .table tbody tr,
+
+    .table td,
+
+    .table th{
+
+        transition:none !important;
+
+    }
+
+}
+
+/* ==========================================
+   MODULE 12 - TABLE UTILITY CLASSES
+========================================== */
+
+/* ===========================
+   TEXT ALIGNMENT
+=========================== */
+
+.table-text-left{
+
+    text-align:left !important;
+
+}
+
+.table-text-center{
+
+    text-align:center !important;
+
+}
+
+.table-text-right{
+
+    text-align:right !important;
+
+}
+
+.table-text-justify{
+
+    text-align:justify !important;
+
+}
+
+/* ===========================
+   VERTICAL ALIGNMENT
+=========================== */
+
+.table-align-top{
+
+    vertical-align:top !important;
+
+}
+
+.table-align-middle{
+
+    vertical-align:middle !important;
+
+}
+
+.table-align-bottom{
+
+    vertical-align:bottom !important;
+
+}
+
+/* ===========================
+   TEXT UTILITIES
+=========================== */
+
+.table-nowrap{
+
+    white-space:nowrap !important;
+
+}
+
+.table-wrap{
+
+    white-space:normal !important;
+
+    word-break:break-word;
+
+}
+
+.table-truncate{
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+    white-space:nowrap;
+
+}
+
+/* ===========================
+   WIDTH UTILITIES
+=========================== */
+
+.table-w-auto{
+
+    width:auto !important;
+
+}
+
+.table-w-100{
+
+    width:100% !important;
+
+}
+
+.table-min-content{
+
+    width:min-content;
+
+}
+
+.table-max-content{
+
+    width:max-content;
+
+}
+
+/* ===========================
+   SPACING
+=========================== */
+
+.table-p-0{
+
+    padding:0 !important;
+
+}
+
+.table-m-0{
+
+    margin:0 !important;
+
+}
+
+/* ===========================
+   DISPLAY
+=========================== */
+
+.table-hidden{
+
+    display:none !important;
+
+}
+
+.table-visible{
+
+    display:table-cell !important;
+
+}
+
+.table-flex{
+
+    display:flex !important;
+
+}
+
+.table-inline-flex{
+
+    display:inline-flex !important;
+
+}
+
+/* ===========================
+   BORDER & SHADOW
+=========================== */
+
+.table-border-0{
+
+    border:none !important;
+
+}
+
+.table-shadow{
+
+    box-shadow:var(--shadow-md) !important;
+
+}
+
+.table-shadow-none{
+
+    box-shadow:none !important;
+
+}
+
+/* ===========================
+   OVERFLOW
+=========================== */
+
+.table-overflow-auto{
+
+    overflow:auto !important;
+
+}
+
+.table-overflow-hidden{
+
+    overflow:hidden !important;
+
+}
+
+/* ===========================
+   CURSOR
+=========================== */
+
+.table-pointer{
+
+    cursor:pointer !important;
+
+}
+
+.table-disabled{
+
+    pointer-events:none !important;
+
+    opacity:.6 !important;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+    .table-mobile-hidden{
+
+        display:none !important;
+
+    }
+
+}
+
+@media(min-width:769px){
+
+    .table-desktop-hidden{
+
+        display:none !important;
+
+    }
+
+}
+
+/* ==========================================
+   MODULE 13 - TABLE ACCESSIBILITY
+========================================== */
+
+/* ===========================
+   KEYBOARD FOCUS
+=========================== */
+
+.table th:focus-visible,
+.table td:focus-visible,
+.table-action:focus-visible,
+.table-page:focus-visible{
+
+    outline:3px solid var(--color-primary);
+
+    outline-offset:2px;
+
+    z-index:5;
+
+}
+
+/* ===========================
+   INTERACTIVE ROWS
+=========================== */
+
+.table-row-clickable:focus-visible{
+
+    outline:2px solid var(--color-primary);
+
+    outline-offset:-2px;
+
+    background:rgba(59,130,246,.08);
+
+}
+
+/* ===========================
+   TOUCH TARGETS
+=========================== */
+
+.table-action,
+.table-page{
+
+    min-width:44px;
+
+    min-height:44px;
+
+}
+
+/* ===========================
+   SCREEN READER ONLY
+=========================== */
+
+.table-sr-only{
+
+    position:absolute;
+
+    width:1px;
+
+    height:1px;
+
+    padding:0;
+
+    margin:-1px;
+
+    overflow:hidden;
+
+    clip:rect(0,0,0,0);
+
+    white-space:nowrap;
+
+    border:0;
+
+}
+
+.table-sr-only-focusable:focus,
+.table-sr-only-focusable:active{
+
+    position:static;
+
+    width:auto;
+
+    height:auto;
+
+    margin:0;
+
+    overflow:visible;
+
+    clip:auto;
+
+    white-space:normal;
+
+}
+
+/* ===========================
+   HIGH CONTRAST
+=========================== */
+
+@media (prefers-contrast:more){
+
+    .table{
+
+        border:2px solid CanvasText;
+
+    }
+
+    .table th,
+    .table td{
+
+        border-width:2px;
+
+    }
+
+}
+
+/* ===========================
+   FORCED COLORS
+=========================== */
+
+@media (forced-colors:active){
+
+    .table,
+    .table th,
+    .table td{
+
+        background:Canvas;
+
+        color:CanvasText;
+
+        border-color:CanvasText;
+
+        forced-color-adjust:auto;
+
+    }
+
+}
+
+/* ===========================
+   REDUCED MOTION
+=========================== */
+
+@media (prefers-reduced-motion:reduce){
+
+    .table,
+    .table *,
+    .table::before,
+    .table::after{
+
+        animation:none !important;
+
+        transition:none !important;
+
+        scroll-behavior:auto !important;
+
+    }
+
+}
+
+/* ===========================
+   TEXT SELECTION
+=========================== */
+
+.table{
+
+    user-select:text;
+
+}
+
+.table-no-select{
+
+    user-select:none;
+
+}
+
+/* ==========================================
+   MODULE 14 - TABLE THEMES
+========================================== */
+
+/* ===========================
+   LIGHT THEME
+=========================== */
+
+.table-theme-light{
+
+    background:var(--color-white);
+
+    color:var(--color-gray-800);
+
+}
+
+.table-theme-light thead{
+
+    background:var(--color-gray-50);
+
+}
+
+/* ===========================
+   DARK THEME
+=========================== */
+
+.table-theme-dark{
+
+    background:var(--color-gray-900);
+
+    color:var(--color-gray-100);
+
+}
+
+.table-theme-dark thead{
+
+    background:rgba(255,255,255,.06);
+
+}
+
+.table-theme-dark th,
+
+.table-theme-dark td{
+
+    border-color:rgba(255,255,255,.08);
+
+}
+
+.table-theme-dark tbody tr:hover{
+
+    background:rgba(255,255,255,.05);
+
+}
+
+/* ===========================
+   GLASS THEME
+=========================== */
+
+.table-theme-glass{
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.18);
+
+}
+
+.table-theme-glass thead{
+
+    background:rgba(255,255,255,.10);
+
+}
+
+/* ===========================
+   SOFT THEME
+=========================== */
+
+.table-theme-soft{
+
+    box-shadow:none;
+
+}
+
+.table-theme-soft th,
+
+.table-theme-soft td{
+
+    border-color:rgba(15,23,42,.05);
+
+}
+
+/* ===========================
+   BORDERED THEME
+=========================== */
+
+.table-theme-bordered{
+
+    border:1px solid rgba(15,23,42,.08);
+
+    border-radius:var(--radius-xl);
+
+    overflow:hidden;
+
+}
+
+/* ===========================
+   ELEVATED THEME
+=========================== */
+
+.table-theme-elevated{
+
+    box-shadow:var(--shadow-xl);
+
+    border-radius:var(--radius-xl);
+
+    overflow:hidden;
+
+}
+
+/* ===========================
+   STRIPED THEME
+=========================== */
+
+.table-theme-striped tbody tr:nth-child(even){
+
+    background:rgba(15,23,42,.03);
+
+}
+
+/* ===========================
+   PREMIUM THEME
+=========================== */
+
+.table-theme-premium{
+
+    background:linear-gradient(
+        180deg,
+        rgba(255,255,255,1),
+        rgba(248,250,252,1)
+    );
+
+    border:1px solid rgba(15,23,42,.08);
+
+    border-radius:var(--radius-2xl);
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+.table-theme-premium thead{
+
+    background:linear-gradient(
+        180deg,
+        rgba(248,250,252,1),
+        rgba(241,245,249,1)
+    );
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+    .table-theme-glass{
+
+        backdrop-filter:blur(12px);
+
+        -webkit-backdrop-filter:blur(12px);
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .table-theme-premium{
+
+        border-radius:var(--radius-lg);
+
+    }
+
+}
+
+/* ==========================================
+   MODULE 15 - GLOBAL RESPONSIVE
+========================================== */
+
+/* ===========================
+   LARGE DESKTOP
+=========================== */
+
+@media (min-width:1600px){
+
+    .table{
+
+        font-size:15px;
+
+    }
+
+    .table th,
+    .table td{
+
+        padding:18px 22px;
+
+    }
+
+}
+
+/* ===========================
+   DESKTOP
+=========================== */
+
+@media (max-width:1400px){
+
+    .table{
+
+        min-width:680px;
+
+    }
+
+}
+
+/* ===========================
+   LAPTOP
+=========================== */
+
+@media (max-width:1200px){
+
+    .table th,
+    .table td{
+
+        padding:14px 16px;
+
+    }
+
+}
+
+/* ===========================
+   TABLET
+=========================== */
+
+@media (max-width:992px){
+
+    .table{
+
+        font-size:13px;
+
+    }
+
+    .table-responsive{
+
+        border-radius:var(--radius-lg);
+
+    }
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width:768px){
+
+    .table{
+
+        min-width:600px;
+
+    }
+
+    .table th,
+    .table td{
+
+        padding:12px 14px;
+
+    }
+
+    .table-pagination{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+}
+
+/* ===========================
+   SMALL MOBILE
+=========================== */
+
+@media (max-width:576px){
+
+    .table{
+
+        font-size:12px;
+
+    }
+
+    .table th,
+    .table td{
+
+        padding:10px 12px;
+
+    }
+
+}
+
+/* ===========================
+   EXTRA SMALL DEVICES
+=========================== */
+
+@media (max-width:400px){
+
+    .table{
+
+        min-width:520px;
+
+    }
+
+}
+
+/* ===========================
+   LANDSCAPE
+=========================== */
+
+@media (max-height:500px) and (orientation:landscape){
+
+    .table-scroll{
+
+        max-height:75vh;
+
+    }
+
+}
+
+/* ===========================
+   TOUCH DEVICES
+=========================== */
+
+@media (hover:none){
+
+    .table-hover tbody tr:hover{
+
+        transform:none;
+
+        box-shadow:none;
+
+    }
+
+}
+
+/* ===========================
+   PRINT
+=========================== */
+
+@media print{
+
+    .table{
+
+        width:100%;
+
+        min-width:100%;
+
+        border-collapse:collapse;
+
+    }
+
+    .table th,
+    .table td{
+
+        color:#000 !important;
+
+        background:#fff !important;
+
+        border:1px solid #000 !important;
+
+        box-shadow:none !important;
+
+    }
+
+    .table-pagination,
+    .table-actions{
+
+        display:none !important;
+
+    }
+
+}
+
+/* ===========================
+   REDUCED MOTION
+=========================== */
+
+@media (prefers-reduced-motion:reduce){
+
+    .table,
+    .table *,
+    .table::before,
+    .table::after{
+
+        animation:none !important;
+
+        transition:none !important;
+
+        scroll-behavior:auto !important;
+
+    }
+
+}
