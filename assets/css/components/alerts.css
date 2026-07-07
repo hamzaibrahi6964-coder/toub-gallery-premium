@@ -1,0 +1,3491 @@
+/* ==========================================
+   MODULE 1 - ALERT BASE
+========================================== */
+
+/* ===========================
+   ALERT
+=========================== */
+
+.alert{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:16px;
+
+    width:100%;
+
+    padding:18px 20px;
+
+    border:1px solid transparent;
+
+    border-radius:var(--radius-2xl);
+
+    background:var(--color-white);
+
+    color:var(--color-gray-800);
+
+    box-shadow:var(--shadow-md);
+
+    overflow:hidden;
+
+}
+
+/* ===========================
+   CONTENT
+=========================== */
+
+.alert-body{
+
+    flex:1;
+
+    min-width:0;
+
+}
+
+/* ===========================
+   TITLE
+=========================== */
+
+.alert-title{
+
+    margin:0 0 6px;
+
+    font-size:1rem;
+
+    font-weight:700;
+
+    color:inherit;
+
+}
+
+/* ===========================
+   MESSAGE
+=========================== */
+
+.alert-message{
+
+    margin:0;
+
+    font-size:14px;
+
+    line-height:1.7;
+
+    color:inherit;
+
+}
+
+/* ===========================
+   BORDER ACCENT
+=========================== */
+
+.alert::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:4px;
+
+    height:100%;
+
+    background:currentColor;
+
+    opacity:.85;
+
+}
+
+/* ===========================
+   COMPACT
+=========================== */
+
+.alert-compact{
+
+    padding:14px 16px;
+
+    gap:12px;
+
+}
+
+/* ===========================
+   ELEVATED
+=========================== */
+
+.alert-elevated{
+
+    box-shadow:var(--shadow-xl);
+
+}
+
+/* ===========================
+   OUTLINED
+=========================== */
+
+.alert-outlined{
+
+    background:transparent;
+
+    border-width:2px;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+    .alert{
+
+        padding:16px 18px;
+
+        gap:14px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .alert{
+
+        padding:14px 16px;
+
+    }
+
+}
+
+/* ==========================================
+   MODULE 2 - ALERT VARIANTS
+========================================== */
+
+/* ===========================
+   SUCCESS
+=========================== */
+
+.alert-success{
+
+    background:rgba(34,197,94,.08);
+
+    border-color:rgba(34,197,94,.18);
+
+    color:var(--color-success);
+
+}
+
+.alert-success .alert-title{
+
+    color:#166534;
+
+}
+
+.alert-success .alert-message{
+
+    color:#166534;
+
+}
+
+/* ===========================
+   ERROR
+=========================== */
+
+.alert-error{
+
+    background:rgba(239,68,68,.08);
+
+    border-color:rgba(239,68,68,.18);
+
+    color:var(--color-danger);
+
+}
+
+.alert-error .alert-title{
+
+    color:#991b1b;
+
+}
+
+.alert-error .alert-message{
+
+    color:#991b1b;
+
+}
+
+/* ===========================
+   WARNING
+=========================== */
+
+.alert-warning{
+
+    background:rgba(245,158,11,.10);
+
+    border-color:rgba(245,158,11,.22);
+
+    color:var(--color-warning);
+
+}
+
+.alert-warning .alert-title{
+
+    color:#92400e;
+
+}
+
+.alert-warning .alert-message{
+
+    color:#92400e;
+
+}
+
+/* ===========================
+   INFO
+=========================== */
+
+.alert-info{
+
+    background:rgba(59,130,246,.08);
+
+    border-color:rgba(59,130,246,.18);
+
+    color:var(--color-primary);
+
+}
+
+.alert-info .alert-title{
+
+    color:#1e3a8a;
+
+}
+
+.alert-info .alert-message{
+
+    color:#1e3a8a;
+
+}
+
+/* ===========================
+   NEUTRAL
+=========================== */
+
+.alert-neutral{
+
+    background:rgba(15,23,42,.04);
+
+    border-color:rgba(15,23,42,.08);
+
+    color:var(--color-gray-700);
+
+}
+
+.alert-neutral .alert-title{
+
+    color:var(--color-gray-900);
+
+}
+
+.alert-neutral .alert-message{
+
+    color:var(--color-gray-700);
+
+}
+
+/* ===========================
+   SOLID VARIANTS
+=========================== */
+
+.alert-solid{
+
+    color:var(--color-white);
+
+}
+
+.alert-solid.alert-success{
+
+    background:var(--color-success);
+
+}
+
+.alert-solid.alert-error{
+
+    background:var(--color-danger);
+
+}
+
+.alert-solid.alert-warning{
+
+    background:var(--color-warning);
+
+    color:var(--color-gray-900);
+
+}
+
+.alert-solid.alert-info{
+
+    background:var(--color-primary);
+
+}
+
+.alert-solid .alert-title,
+
+.alert-solid .alert-message{
+
+    color:inherit;
+
+}
+
+/* ===========================
+   SUBTLE VARIANTS
+=========================== */
+
+.alert-subtle{
+
+    border-width:1px;
+
+    box-shadow:none;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+    .alert{
+
+        border-radius:var(--radius-xl);
+
+    }
+
+}
+
+/* ==========================================
+   MODULE 3 - ALERT ICONS
+========================================== */
+
+/* ===========================
+   ALERT ICON
+=========================== */
+
+.alert-icon{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex-shrink:0;
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.45);
+
+    font-size:22px;
+
+    line-height:1;
+
+}
+
+/* ===========================
+   SVG & ICONS
+=========================== */
+
+.alert-icon i,
+
+.alert-icon svg{
+
+    font-size:22px;
+
+    width:22px;
+
+    height:22px;
+
+}
+
+/* ===========================
+   STATUS ICON COLORS
+=========================== */
+
+.alert-success .alert-icon{
+
+    background:rgba(34,197,94,.14);
+
+    color:var(--color-success);
+
+}
+
+.alert-error .alert-icon{
+
+    background:rgba(239,68,68,.14);
+
+    color:var(--color-danger);
+
+}
+
+.alert-warning .alert-icon{
+
+    background:rgba(245,158,11,.16);
+
+    color:var(--color-warning);
+
+}
+
+.alert-info .alert-icon{
+
+    background:rgba(59,130,246,.14);
+
+    color:var(--color-primary);
+
+}
+
+.alert-neutral .alert-icon{
+
+    background:rgba(15,23,42,.08);
+
+    color:var(--color-gray-700);
+
+}
+
+/* ===========================
+   SOLID ALERT ICONS
+=========================== */
+
+.alert-solid .alert-icon{
+
+    background:rgba(255,255,255,.18);
+
+    color:inherit;
+
+}
+
+/* ===========================
+   ICON SIZES
+=========================== */
+
+.alert-icon-sm{
+
+    width:36px;
+
+    height:36px;
+
+}
+
+.alert-icon-sm i,
+
+.alert-icon-sm svg{
+
+    font-size:18px;
+
+    width:18px;
+
+    height:18px;
+
+}
+
+.alert-icon-lg{
+
+    width:60px;
+
+    height:60px;
+
+}
+
+.alert-icon-lg i,
+
+.alert-icon-lg svg{
+
+    font-size:28px;
+
+    width:28px;
+
+    height:28px;
+
+}
+
+/* ===========================
+   ICON ONLY ALERT
+=========================== */
+
+.alert-icon-only{
+
+    justify-content:center;
+
+    text-align:center;
+
+}
+
+.alert-icon-only .alert-body{
+
+    display:none;
+
+}
+
+/* ===========================
+   ICON ANIMATION
+=========================== */
+
+@keyframes alertIconPulse{
+
+    0%,100%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.08);
+
+    }
+
+}
+
+.alert-icon-animated{
+
+    animation:alertIconPulse 2s ease-in-out infinite;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+    .alert-icon{
+
+        width:44px;
+
+        height:44px;
+
+    }
+
+    .alert-icon i,
+
+    .alert-icon svg{
+
+        font-size:20px;
+
+        width:20px;
+
+        height:20px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .alert-icon{
+
+        width:40px;
+
+        height:40px;
+
+    }
+
+    .alert-icon i,
+
+    .alert-icon svg{
+
+        font-size:18px;
+
+        width:18px;
+
+        height:18px;
+
+    }
+
+}
+
+/* ==========================================
+   MODULE 4 - ALERT CONTENT
+========================================== */
+
+/* ===========================
+   BODY
+=========================== */
+
+.alert-body{
+
+    flex:1;
+
+    min-width:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.alert-header{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:16px;
+
+}
+
+/* ===========================
+   TITLE
+=========================== */
+
+.alert-title{
+
+    margin:0;
+
+    font-size:1rem;
+
+    font-weight:700;
+
+    line-height:1.4;
+
+}
+
+/* ===========================
+   MESSAGE
+=========================== */
+
+.alert-message{
+
+    margin:0;
+
+    font-size:14px;
+
+    line-height:1.7;
+
+    color:inherit;
+
+}
+
+/* ===========================
+   LINK
+=========================== */
+
+.alert-link{
+
+    font-weight:600;
+
+    color:inherit;
+
+    text-decoration:underline;
+
+    text-underline-offset:3px;
+
+    transition:opacity .3s ease;
+
+}
+
+.alert-link:hover{
+
+    opacity:.8;
+
+}
+
+/* ===========================
+   LIST
+=========================== */
+
+.alert-list{
+
+    margin:0;
+
+    padding-left:18px;
+
+}
+
+.alert-list li{
+
+    margin:6px 0;
+
+    line-height:1.6;
+
+}
+
+/* ===========================
+   META
+=========================== */
+
+.alert-meta{
+
+    display:flex;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+    font-size:13px;
+
+    opacity:.8;
+
+}
+
+.alert-meta-item{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:6px;
+
+}
+
+/* ===========================
+   TIMESTAMP
+=========================== */
+
+.alert-time{
+
+    font-size:12px;
+
+    font-weight:500;
+
+    opacity:.75;
+
+    white-space:nowrap;
+
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+.alert-footer{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:16px;
+
+    margin-top:8px;
+
+}
+
+/* ===========================
+   DIVIDER
+=========================== */
+
+.alert-divider{
+
+    width:100%;
+
+    height:1px;
+
+    background:rgba(15,23,42,.08);
+
+    margin:6px 0;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+    .alert-header,
+
+    .alert-footer{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .alert-meta{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:8px;
+
+    }
+
+}
+
+/* ==========================================
+   MODULE 5 - ALERT ACTIONS
+========================================== */
+
+/* ===========================
+   ACTIONS CONTAINER
+=========================== */
+
+.alert-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+    margin-top:14px;
+
+}
+
+/* ===========================
+   ACTION BUTTON
+=========================== */
+
+.alert-action{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    min-height:40px;
+
+    padding:0 18px;
+
+    border:1px solid transparent;
+
+    border-radius:var(--radius-lg);
+
+    background:var(--color-primary);
+
+    color:var(--color-white);
+
+    font-size:14px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    text-decoration:none;
+
+    transition:
+        background .3s ease,
+        color .3s ease,
+        border-color .3s ease,
+        transform .3s ease,
+        box-shadow .3s ease;
+
+}
+
+.alert-action:hover{
+
+    transform:translateY(-2px);
+
+    background:var(--color-primary-dark);
+
+    box-shadow:var(--shadow-md);
+
+}
+
+/* ===========================
+   SECONDARY
+=========================== */
+
+.alert-action-secondary{
+
+    background:transparent;
+
+    color:var(--color-gray-800);
+
+    border-color:rgba(15,23,42,.12);
+
+}
+
+.alert-action-secondary:hover{
+
+    background:rgba(15,23,42,.05);
+
+}
+
+/* ===========================
+   SUCCESS
+=========================== */
+
+.alert-action-success{
+
+    background:var(--color-success);
+
+}
+
+.alert-action-success:hover{
+
+    filter:brightness(.95);
+
+}
+
+/* ===========================
+   DANGER
+=========================== */
+
+.alert-action-danger{
+
+    background:var(--color-danger);
+
+}
+
+.alert-action-danger:hover{
+
+    filter:brightness(.95);
+
+}
+
+/* ===========================
+   ICONS
+=========================== */
+
+.alert-action i,
+
+.alert-action svg{
+
+    font-size:16px;
+
+}
+
+/* ===========================
+   BUTTON GROUP
+=========================== */
+
+.alert-action-group{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+
+}
+
+/* ===========================
+   LOADING STATE
+=========================== */
+
+.alert-action-loading{
+
+    pointer-events:none;
+
+    opacity:.75;
+
+}
+
+.alert-action-loading::after{
+
+    content:"";
+
+    width:14px;
+
+    height:14px;
+
+    margin-left:8px;
+
+    border:2px solid currentColor;
+
+    border-right-color:transparent;
+
+    border-radius:50%;
+
+    animation:alertActionSpin .7s linear infinite;
+
+}
+
+@keyframes alertActionSpin{
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+/* ===========================
+   FULL WIDTH
+=========================== */
+
+.alert-action-block{
+
+    width:100%;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+    .alert-actions{
+
+        gap:10px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .alert-actions,
+
+    .alert-action-group{
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+    }
+
+    .alert-action{
+
+        width:100%;
+
+    }
+
+}
+
+/* ==========================================
+   MODULE 6 - ALERT DISMISS BUTTON
+========================================== */
+
+/* ===========================
+   DISMISS BUTTON
+=========================== */
+
+.alert-close{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex-shrink:0;
+
+    width:40px;
+
+    height:40px;
+
+    margin-left:auto;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:transparent;
+
+    color:inherit;
+
+    cursor:pointer;
+
+    transition:
+        background .3s ease,
+        color .3s ease,
+        transform .3s ease,
+        opacity .3s ease;
+
+}
+
+/* ===========================
+   HOVER
+=========================== */
+
+.alert-close:hover{
+
+    background:rgba(15,23,42,.08);
+
+    transform:rotate(90deg);
+
+}
+
+/* ===========================
+   ACTIVE
+=========================== */
+
+.alert-close:active{
+
+    transform:scale(.92);
+
+}
+
+/* ===========================
+   FOCUS
+=========================== */
+
+.alert-close:focus-visible{
+
+    outline:2px solid var(--color-primary);
+
+    outline-offset:2px;
+
+}
+
+/* ===========================
+   ICON
+=========================== */
+
+.alert-close i,
+
+.alert-close svg{
+
+    width:18px;
+
+    height:18px;
+
+    font-size:18px;
+
+    pointer-events:none;
+
+}
+
+/* ===========================
+   LIGHT VARIANTS
+=========================== */
+
+.alert-success .alert-close:hover{
+
+    background:rgba(34,197,94,.14);
+
+}
+
+.alert-error .alert-close:hover{
+
+    background:rgba(239,68,68,.14);
+
+}
+
+.alert-warning .alert-close:hover{
+
+    background:rgba(245,158,11,.16);
+
+}
+
+.alert-info .alert-close:hover{
+
+    background:rgba(59,130,246,.14);
+
+}
+
+.alert-neutral .alert-close:hover{
+
+    background:rgba(15,23,42,.08);
+
+}
+
+/* ===========================
+   SOLID ALERTS
+=========================== */
+
+.alert-solid .alert-close{
+
+    color:inherit;
+
+}
+
+.alert-solid .alert-close:hover{
+
+    background:rgba(255,255,255,.18);
+
+}
+
+/* ===========================
+   SMALL SIZE
+=========================== */
+
+.alert-close-sm{
+
+    width:32px;
+
+    height:32px;
+
+}
+
+.alert-close-sm i,
+
+.alert-close-sm svg{
+
+    width:16px;
+
+    height:16px;
+
+    font-size:16px;
+
+}
+
+/* ===========================
+   LARGE SIZE
+=========================== */
+
+.alert-close-lg{
+
+    width:48px;
+
+    height:48px;
+
+}
+
+.alert-close-lg i,
+
+.alert-close-lg svg{
+
+    width:22px;
+
+    height:22px;
+
+    font-size:22px;
+
+}
+
+/* ===========================
+   HIDDEN STATE
+=========================== */
+
+.alert-close-hidden{
+
+    display:none !important;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+    .alert-close{
+
+        width:36px;
+
+        height:36px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .alert-close{
+
+        width:34px;
+
+        height:34px;
+
+    }
+
+}
+
+/* ==========================================
+   MODULE 7 - TOAST NOTIFICATIONS
+========================================== */
+
+/* ===========================
+   TOAST CONTAINER
+=========================== */
+
+.toast-container{
+
+    position:fixed;
+
+    top:24px;
+
+    right:24px;
+
+    z-index:9999;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+    width:min(420px,calc(100vw - 32px));
+
+    pointer-events:none;
+
+}
+
+/* ===========================
+   TOAST
+=========================== */
+
+.toast{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:16px;
+
+    width:100%;
+
+    padding:18px 20px;
+
+    border-radius:var(--radius-2xl);
+
+    background:var(--color-white);
+
+    border:1px solid rgba(15,23,42,.08);
+
+    box-shadow:var(--shadow-xl);
+
+    overflow:hidden;
+
+    pointer-events:auto;
+
+    transition:
+        transform .3s ease,
+        opacity .3s ease,
+        box-shadow .3s ease;
+
+}
+
+.toast:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:var(--shadow-2xl);
+
+}
+
+/* ===========================
+   TOAST BODY
+=========================== */
+
+.toast-body{
+
+    flex:1;
+
+    min-width:0;
+
+}
+
+/* ===========================
+   TOAST TITLE
+=========================== */
+
+.toast-title{
+
+    margin:0 0 6px;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    color:var(--color-gray-900);
+
+}
+
+/* ===========================
+   TOAST MESSAGE
+=========================== */
+
+.toast-message{
+
+    margin:0;
+
+    font-size:14px;
+
+    line-height:1.6;
+
+    color:var(--color-gray-600);
+
+}
+
+/* ===========================
+   STATUS COLORS
+=========================== */
+
+.toast-success{
+
+    border-left:4px solid var(--color-success);
+
+}
+
+.toast-error{
+
+    border-left:4px solid var(--color-danger);
+
+}
+
+.toast-warning{
+
+    border-left:4px solid var(--color-warning);
+
+}
+
+.toast-info{
+
+    border-left:4px solid var(--color-primary);
+
+}
+
+/* ===========================
+   COMPACT
+=========================== */
+
+.toast-compact{
+
+    padding:14px 16px;
+
+}
+
+/* ===========================
+   FULL WIDTH
+=========================== */
+
+.toast-full{
+
+    width:100%;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+    .toast-container{
+
+        top:16px;
+
+        right:16px;
+
+        left:16px;
+
+        width:auto;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .toast{
+
+        padding:16px;
+
+        border-radius:var(--radius-xl);
+
+    }
+
+}
+
+/* ==========================================
+   MODULE 8 - ALERT BANNER
+========================================== */
+
+/* ===========================
+   BANNER
+=========================== */
+
+.alert-banner{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:20px;
+
+    width:100%;
+
+    padding:16px 24px;
+
+    border-bottom:1px solid rgba(15,23,42,.08);
+
+    background:var(--color-primary);
+
+    color:var(--color-white);
+
+    overflow:hidden;
+
+    z-index:1000;
+
+}
+
+/* ===========================
+   FIXED POSITIONS
+=========================== */
+
+.alert-banner-top{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    right:0;
+
+}
+
+.alert-banner-bottom{
+
+    position:fixed;
+
+    bottom:0;
+
+    left:0;
+
+    right:0;
+
+    border-bottom:none;
+
+    border-top:1px solid rgba(255,255,255,.12);
+
+}
+
+/* ===========================
+   CONTENT
+=========================== */
+
+.alert-banner-content{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    flex:1;
+
+    min-width:0;
+
+}
+
+.alert-banner-text{
+
+    margin:0;
+
+    font-size:15px;
+
+    line-height:1.6;
+
+    color:inherit;
+
+}
+
+/* ===========================
+   ICON
+=========================== */
+
+.alert-banner-icon{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex-shrink:0;
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.15);
+
+}
+
+.alert-banner-icon i,
+
+.alert-banner-icon svg{
+
+    font-size:20px;
+
+}
+
+/* ===========================
+   ACTIONS
+=========================== */
+
+.alert-banner-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    flex-shrink:0;
+
+}
+
+.alert-banner-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-height:40px;
+
+    padding:0 18px;
+
+    border:1px solid rgba(255,255,255,.2);
+
+    border-radius:var(--radius-lg);
+
+    background:rgba(255,255,255,.12);
+
+    color:var(--color-white);
+
+    text-decoration:none;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    transition:all .3s ease;
+
+}
+
+.alert-banner-btn:hover{
+
+    background:rgba(255,255,255,.22);
+
+    transform:translateY(-2px);
+
+}
+
+/* ===========================
+   VARIANTS
+=========================== */
+
+.alert-banner-success{
+
+    background:var(--color-success);
+
+}
+
+.alert-banner-error{
+
+    background:var(--color-danger);
+
+}
+
+.alert-banner-warning{
+
+    background:var(--color-warning);
+
+    color:var(--color-gray-900);
+
+}
+
+.alert-banner-info{
+
+    background:var(--color-primary);
+
+}
+
+/* ===========================
+   DISMISSIBLE
+=========================== */
+
+.alert-banner-dismissible{
+
+    padding-right:72px;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+    .alert-banner{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        padding:16px 20px;
+
+    }
+
+    .alert-banner-actions{
+
+        width:100%;
+
+        flex-wrap:wrap;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .alert-banner{
+
+        padding:14px 16px;
+
+    }
+
+    .alert-banner-btn{
+
+        width:100%;
+
+    }
+
+}
+
+/* ==========================================
+   MODULE 9 - ALERT PROGRESS BAR
+========================================== */
+
+/* ===========================
+   PROGRESS CONTAINER
+=========================== */
+
+.alert-progress{
+
+    position:absolute;
+
+    left:0;
+
+    right:0;
+
+    bottom:0;
+
+    width:100%;
+
+    height:4px;
+
+    overflow:hidden;
+
+    background:rgba(15,23,42,.08);
+
+}
+
+/* ===========================
+   PROGRESS BAR
+=========================== */
+
+.alert-progress-bar{
+
+    width:100%;
+
+    height:100%;
+
+    transform-origin:left center;
+
+    background:var(--color-primary);
+
+    animation:alertProgress 5s linear forwards;
+
+}
+
+/* ===========================
+   VARIANTS
+=========================== */
+
+.alert-success .alert-progress-bar,
+
+.toast-success .alert-progress-bar{
+
+    background:var(--color-success);
+
+}
+
+.alert-error .alert-progress-bar,
+
+.toast-error .alert-progress-bar{
+
+    background:var(--color-danger);
+
+}
+
+.alert-warning .alert-progress-bar,
+
+.toast-warning .alert-progress-bar{
+
+    background:var(--color-warning);
+
+}
+
+.alert-info .alert-progress-bar,
+
+.toast-info .alert-progress-bar{
+
+    background:var(--color-primary);
+
+}
+
+.alert-neutral .alert-progress-bar{
+
+    background:var(--color-gray-600);
+
+}
+
+/* ===========================
+   THICK PROGRESS
+=========================== */
+
+.alert-progress-lg{
+
+    height:6px;
+
+}
+
+/* ===========================
+   THIN PROGRESS
+=========================== */
+
+.alert-progress-sm{
+
+    height:2px;
+
+}
+
+/* ===========================
+   TOP POSITION
+=========================== */
+
+.alert-progress-top{
+
+    top:0;
+
+    bottom:auto;
+
+}
+
+/* ===========================
+   INDETERMINATE
+=========================== */
+
+.alert-progress-indeterminate .alert-progress-bar{
+
+    width:35%;
+
+    animation:alertIndeterminate 1.4s ease-in-out infinite;
+
+}
+
+/* ===========================
+   PAUSED
+=========================== */
+
+.alert-progress-paused .alert-progress-bar{
+
+    animation-play-state:paused;
+
+}
+
+/* ===========================
+   ANIMATIONS
+=========================== */
+
+@keyframes alertProgress{
+
+    from{
+
+        transform:scaleX(1);
+
+    }
+
+    to{
+
+        transform:scaleX(0);
+
+    }
+
+}
+
+@keyframes alertIndeterminate{
+
+    0%{
+
+        transform:translateX(-120%);
+
+    }
+
+    100%{
+
+        transform:translateX(420%);
+
+    }
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+    .alert-progress{
+
+        height:3px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .alert-progress-lg{
+
+        height:5px;
+
+    }
+
+}
+
+/* ==========================================
+   MODULE 10 - ALERT STACK & POSITIONING
+========================================== */
+
+/* ===========================
+   STACK CONTAINER
+=========================== */
+
+.alert-stack{
+
+    position:fixed;
+
+    z-index:9999;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+    width:min(420px,calc(100vw - 32px));
+
+    pointer-events:none;
+
+}
+
+/* ===========================
+   STACK ITEMS
+=========================== */
+
+.alert-stack > *{
+
+    pointer-events:auto;
+
+}
+
+/* ===========================
+   TOP POSITIONS
+=========================== */
+
+.alert-top-left{
+
+    top:24px;
+
+    left:24px;
+
+}
+
+.alert-top-center{
+
+    top:24px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+}
+
+.alert-top-right{
+
+    top:24px;
+
+    right:24px;
+
+}
+
+/* ===========================
+   CENTER POSITIONS
+=========================== */
+
+.alert-center-left{
+
+    top:50%;
+
+    left:24px;
+
+    transform:translateY(-50%);
+
+}
+
+.alert-center{
+
+    top:50%;
+
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+}
+
+.alert-center-right{
+
+    top:50%;
+
+    right:24px;
+
+    transform:translateY(-50%);
+
+}
+
+/* ===========================
+   BOTTOM POSITIONS
+=========================== */
+
+.alert-bottom-left{
+
+    bottom:24px;
+
+    left:24px;
+
+}
+
+.alert-bottom-center{
+
+    bottom:24px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+}
+
+.alert-bottom-right{
+
+    bottom:24px;
+
+    right:24px;
+
+}
+
+/* ===========================
+   REVERSE STACK
+=========================== */
+
+.alert-stack-reverse{
+
+    flex-direction:column-reverse;
+
+}
+
+/* ===========================
+   COMPACT STACK
+=========================== */
+
+.alert-stack-compact{
+
+    gap:10px;
+
+}
+
+/* ===========================
+   LARGE STACK
+=========================== */
+
+.alert-stack-lg{
+
+    gap:24px;
+
+}
+
+/* ===========================
+   FULL WIDTH
+=========================== */
+
+.alert-stack-full{
+
+    width:100%;
+
+    max-width:100%;
+
+    left:0;
+
+    right:0;
+
+    padding:0 20px;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+    .alert-stack{
+
+        width:calc(100vw - 24px);
+
+    }
+
+    .alert-top-left,
+
+    .alert-top-center,
+
+    .alert-top-right{
+
+        top:16px;
+
+        left:12px;
+
+        right:12px;
+
+        transform:none;
+
+    }
+
+    .alert-bottom-left,
+
+    .alert-bottom-center,
+
+    .alert-bottom-right{
+
+        bottom:16px;
+
+        left:12px;
+
+        right:12px;
+
+        transform:none;
+
+    }
+
+    .alert-center,
+
+    .alert-center-left,
+
+    .alert-center-right{
+
+        left:12px;
+
+        right:12px;
+
+        width:auto;
+
+        transform:translateY(-50%);
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .alert-stack{
+
+        gap:12px;
+
+    }
+
+}
+
+/* ==========================================
+   MODULE 11 - ALERT ANIMATIONS
+========================================== */
+
+/* ===========================
+   FADE IN
+=========================== */
+
+@keyframes alertFadeIn{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+.alert-fade-in{
+
+    animation:alertFadeIn .35s ease forwards;
+
+}
+
+/* ===========================
+   FADE OUT
+=========================== */
+
+@keyframes alertFadeOut{
+
+    from{
+
+        opacity:1;
+
+    }
+
+    to{
+
+        opacity:0;
+
+    }
+
+}
+
+.alert-fade-out{
+
+    animation:alertFadeOut .3s ease forwards;
+
+}
+
+/* ===========================
+   SLIDE IN RIGHT
+=========================== */
+
+@keyframes alertSlideInRight{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(100%);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+.alert-slide-right{
+
+    animation:alertSlideInRight .45s ease forwards;
+
+}
+
+/* ===========================
+   SLIDE IN LEFT
+=========================== */
+
+@keyframes alertSlideInLeft{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(-100%);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+.alert-slide-left{
+
+    animation:alertSlideInLeft .45s ease forwards;
+
+}
+
+/* ===========================
+   SLIDE IN TOP
+=========================== */
+
+@keyframes alertSlideDown{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.alert-slide-down{
+
+    animation:alertSlideDown .45s ease forwards;
+
+}
+
+/* ===========================
+   SLIDE IN BOTTOM
+=========================== */
+
+@keyframes alertSlideUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.alert-slide-up{
+
+    animation:alertSlideUp .45s ease forwards;
+
+}
+
+/* ===========================
+   SCALE
+=========================== */
+
+@keyframes alertScale{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.92);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+.alert-scale{
+
+    animation:alertScale .35s ease forwards;
+
+}
+
+/* ===========================
+   SHAKE
+=========================== */
+
+@keyframes alertShake{
+
+    0%,100%{
+
+        transform:translateX(0);
+
+    }
+
+    20%{
+
+        transform:translateX(-6px);
+
+    }
+
+    40%{
+
+        transform:translateX(6px);
+
+    }
+
+    60%{
+
+        transform:translateX(-4px);
+
+    }
+
+    80%{
+
+        transform:translateX(4px);
+
+    }
+
+}
+
+.alert-shake{
+
+    animation:alertShake .45s ease;
+
+}
+
+/* ===========================
+   PULSE
+=========================== */
+
+@keyframes alertPulse{
+
+    0%,100%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.02);
+
+    }
+
+}
+
+.alert-pulse{
+
+    animation:alertPulse 2s ease-in-out infinite;
+
+}
+
+/* ===========================
+   BOUNCE
+=========================== */
+
+@keyframes alertBounce{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    30%{
+
+        transform:translateY(-8px);
+
+    }
+
+    60%{
+
+        transform:translateY(3px);
+
+    }
+
+}
+
+.alert-bounce{
+
+    animation:alertBounce .7s ease;
+
+}
+
+/* ===========================
+   REDUCED MOTION
+=========================== */
+
+@media(prefers-reduced-motion:reduce){
+
+    .alert-fade-in,
+
+    .alert-fade-out,
+
+    .alert-slide-right,
+
+    .alert-slide-left,
+
+    .alert-slide-down,
+
+    .alert-slide-up,
+
+    .alert-scale,
+
+    .alert-shake,
+
+    .alert-pulse,
+
+    .alert-bounce{
+
+        animation:none !important;
+
+    }
+
+}
+
+/* ==========================================
+   MODULE 12 - ALERT UTILITY CLASSES
+========================================== */
+
+/* ===========================
+   DISPLAY
+=========================== */
+
+.alert-hidden{
+
+    display:none !important;
+
+}
+
+.alert-block{
+
+    display:block !important;
+
+}
+
+.alert-inline{
+
+    display:inline-flex !important;
+
+}
+
+.alert-flex{
+
+    display:flex !important;
+
+}
+
+.alert-grid{
+
+    display:grid !important;
+
+}
+
+/* ===========================
+   FLEX UTILITIES
+=========================== */
+
+.alert-items-center{
+
+    align-items:center !important;
+
+}
+
+.alert-items-start{
+
+    align-items:flex-start !important;
+
+}
+
+.alert-items-end{
+
+    align-items:flex-end !important;
+
+}
+
+.alert-justify-center{
+
+    justify-content:center !important;
+
+}
+
+.alert-justify-between{
+
+    justify-content:space-between !important;
+
+}
+
+.alert-flex-column{
+
+    flex-direction:column !important;
+
+}
+
+.alert-flex-wrap{
+
+    flex-wrap:wrap !important;
+
+}
+
+/* ===========================
+   WIDTH & HEIGHT
+=========================== */
+
+.alert-w-100{
+
+    width:100% !important;
+
+}
+
+.alert-h-100{
+
+    height:100% !important;
+
+}
+
+.alert-max-content{
+
+    width:max-content !important;
+
+}
+
+/* ===========================
+   SPACING
+=========================== */
+
+.alert-mt-auto{
+
+    margin-top:auto !important;
+
+}
+
+.alert-mb-0{
+
+    margin-bottom:0 !important;
+
+}
+
+.alert-p-0{
+
+    padding:0 !important;
+
+}
+
+/* ===========================
+   POSITION
+=========================== */
+
+.alert-relative{
+
+    position:relative !important;
+
+}
+
+.alert-absolute{
+
+    position:absolute !important;
+
+}
+
+.alert-fixed{
+
+    position:fixed !important;
+
+}
+
+.alert-overflow-hidden{
+
+    overflow:hidden !important;
+
+}
+
+/* ===========================
+   BORDER & SHADOW
+=========================== */
+
+.alert-rounded{
+
+    border-radius:var(--radius-xl) !important;
+
+}
+
+.alert-rounded-full{
+
+    border-radius:999px !important;
+
+}
+
+.alert-shadow{
+
+    box-shadow:var(--shadow-lg) !important;
+
+}
+
+.alert-shadow-none{
+
+    box-shadow:none !important;
+
+}
+
+/* ===========================
+   VISIBILITY
+=========================== */
+
+.alert-visible{
+
+    visibility:visible !important;
+
+    opacity:1 !important;
+
+}
+
+.alert-invisible{
+
+    visibility:hidden !important;
+
+    opacity:0 !important;
+
+}
+
+/* ===========================
+   CURSOR
+=========================== */
+
+.alert-pointer{
+
+    cursor:pointer !important;
+
+}
+
+.alert-disabled{
+
+    pointer-events:none !important;
+
+    opacity:.6 !important;
+
+}
+
+/* ===========================
+   RESPONSIVE HELPERS
+=========================== */
+
+@media(max-width:768px){
+
+    .alert-mobile-hidden{
+
+        display:none !important;
+
+    }
+
+    .alert-mobile-center{
+
+        text-align:center !important;
+
+    }
+
+    .alert-mobile-column{
+
+        flex-direction:column !important;
+
+    }
+
+}
+
+@media(min-width:769px){
+
+    .alert-desktop-hidden{
+
+        display:none !important;
+
+    }
+
+}
+
+/* ==========================================
+   MODULE 13 - ALERT ACCESSIBILITY
+========================================== */
+
+/* ===========================
+   FOCUS VISIBLE
+=========================== */
+
+.alert:focus-visible{
+
+    outline:3px solid var(--color-primary);
+
+    outline-offset:3px;
+
+}
+
+.alert-action:focus-visible,
+
+.alert-banner-btn:focus-visible,
+
+.alert-close:focus-visible{
+
+    outline:3px solid var(--color-primary);
+
+    outline-offset:2px;
+
+}
+
+/* ===========================
+   KEYBOARD NAVIGATION
+=========================== */
+
+.alert-action,
+
+.alert-banner-btn,
+
+.alert-close{
+
+    -webkit-tap-highlight-color:transparent;
+
+}
+
+.alert-action:focus,
+
+.alert-banner-btn:focus,
+
+.alert-close:focus{
+
+    z-index:2;
+
+}
+
+/* ===========================
+   HIGH CONTRAST
+=========================== */
+
+@media (prefers-contrast:more){
+
+    .alert{
+
+        border-width:2px;
+
+        box-shadow:none;
+
+    }
+
+    .alert::before{
+
+        width:6px;
+
+    }
+
+    .alert-action,
+
+    .alert-banner-btn{
+
+        border-width:2px;
+
+    }
+
+}
+
+/* ===========================
+   FORCED COLORS
+=========================== */
+
+@media (forced-colors:active){
+
+    .alert{
+
+        border:2px solid CanvasText;
+
+        background:Canvas;
+
+        color:CanvasText;
+
+    }
+
+    .alert-action,
+
+    .alert-banner-btn,
+
+    .alert-close{
+
+        border:1px solid ButtonText;
+
+        forced-color-adjust:auto;
+
+    }
+
+}
+
+/* ===========================
+   SCREEN READER HELPERS
+=========================== */
+
+.alert-sr-only{
+
+    position:absolute;
+
+    width:1px;
+
+    height:1px;
+
+    padding:0;
+
+    margin:-1px;
+
+    overflow:hidden;
+
+    clip:rect(0,0,0,0);
+
+    white-space:nowrap;
+
+    border:0;
+
+}
+
+.alert-sr-only-focusable:focus,
+
+.alert-sr-only-focusable:active{
+
+    position:static;
+
+    width:auto;
+
+    height:auto;
+
+    margin:0;
+
+    overflow:visible;
+
+    clip:auto;
+
+    white-space:normal;
+
+}
+
+/* ===========================
+   TOUCH TARGETS
+=========================== */
+
+.alert-action,
+
+.alert-banner-btn,
+
+.alert-close{
+
+    min-width:44px;
+
+    min-height:44px;
+
+}
+
+/* ===========================
+   TEXT SELECTION
+=========================== */
+
+.alert-message,
+
+.alert-title{
+
+    user-select:text;
+
+}
+
+.alert-close i,
+
+.alert-close svg{
+
+    user-select:none;
+
+}
+
+/* ===========================
+   REDUCED TRANSPARENCY
+=========================== */
+
+@media (prefers-reduced-transparency:reduce){
+
+    .alert,
+
+    .toast,
+
+    .alert-banner{
+
+        backdrop-filter:none;
+
+        -webkit-backdrop-filter:none;
+
+    }
+
+}
+
+/* ===========================
+   REDUCED MOTION
+=========================== */
+
+@media (prefers-reduced-motion:reduce){
+
+    .alert,
+
+    .toast,
+
+    .alert-action,
+
+    .alert-close,
+
+    .alert-banner-btn{
+
+        transition:none !important;
+
+    }
+
+}
+
+/* ==========================================
+   MODULE 14 - ALERT THEMES
+========================================== */
+
+/* ===========================
+   LIGHT THEME
+=========================== */
+
+.alert-theme-light{
+
+    background:var(--color-white);
+
+    color:var(--color-gray-800);
+
+    border-color:rgba(15,23,42,.08);
+
+}
+
+/* ===========================
+   DARK THEME
+=========================== */
+
+.alert-theme-dark{
+
+    background:#0f172a;
+
+    color:#f8fafc;
+
+    border-color:rgba(255,255,255,.08);
+
+}
+
+.alert-theme-dark .alert-title,
+
+.alert-theme-dark .alert-message,
+
+.alert-theme-dark .alert-link{
+
+    color:inherit;
+
+}
+
+/* ===========================
+   GLASS THEME
+=========================== */
+
+.alert-theme-glass{
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(20px);
+
+    -webkit-backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.18);
+
+}
+
+.alert-theme-glass.alert-theme-dark{
+
+    background:rgba(15,23,42,.55);
+
+}
+
+/* ===========================
+   GRADIENT THEME
+=========================== */
+
+.alert-theme-gradient{
+
+    background:linear-gradient(
+        135deg,
+        var(--color-primary),
+        var(--color-primary-dark)
+    );
+
+    color:var(--color-white);
+
+}
+
+.alert-theme-gradient .alert-title,
+
+.alert-theme-gradient .alert-message,
+
+.alert-theme-gradient .alert-link{
+
+    color:inherit;
+
+}
+
+/* ===========================
+   BORDERED THEME
+=========================== */
+
+.alert-theme-bordered{
+
+    background:transparent;
+
+    border:2px solid currentColor;
+
+    box-shadow:none;
+
+}
+
+/* ===========================
+   SOFT THEME
+=========================== */
+
+.alert-theme-soft{
+
+    box-shadow:none;
+
+    border-color:transparent;
+
+}
+
+/* ===========================
+   ELEVATED THEME
+=========================== */
+
+.alert-theme-elevated{
+
+    box-shadow:var(--shadow-2xl);
+
+}
+
+/* ===========================
+   ROUNDED THEME
+=========================== */
+
+.alert-theme-pill{
+
+    border-radius:999px;
+
+}
+
+/* ===========================
+   SQUARE THEME
+=========================== */
+
+.alert-theme-square{
+
+    border-radius:0;
+
+}
+
+/* ===========================
+   TRANSPARENT THEME
+=========================== */
+
+.alert-theme-transparent{
+
+    background:transparent;
+
+    box-shadow:none;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+    .alert-theme-pill{
+
+        border-radius:var(--radius-xl);
+
+    }
+
+}
+
+/* ==========================================
+   MODULE 15 - GLOBAL RESPONSIVE
+========================================== */
+
+/* ===========================
+   LARGE DESKTOP
+=========================== */
+
+@media (min-width:1600px){
+
+    .alert-stack,
+    .toast-container{
+
+        width:480px;
+
+    }
+
+}
+
+/* ===========================
+   DESKTOP
+=========================== */
+
+@media (max-width:1400px){
+
+    .alert{
+
+        padding:18px;
+
+    }
+
+}
+
+/* ===========================
+   LAPTOP
+=========================== */
+
+@media (max-width:1200px){
+
+    .alert-stack,
+    .toast-container{
+
+        width:min(400px,calc(100vw - 32px));
+
+    }
+
+}
+
+/* ===========================
+   TABLET
+=========================== */
+
+@media (max-width:992px){
+
+    .alert{
+
+        gap:14px;
+
+    }
+
+    .alert-banner{
+
+        padding:16px 20px;
+
+    }
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width:768px){
+
+    .alert{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .alert-icon{
+
+        margin-bottom:4px;
+
+    }
+
+    .alert-actions{
+
+        width:100%;
+
+    }
+
+    .alert-stack,
+    .toast-container{
+
+        left:12px;
+
+        right:12px;
+
+        width:auto;
+
+    }
+
+}
+
+/* ===========================
+   SMALL MOBILE
+=========================== */
+
+@media (max-width:576px){
+
+    .alert{
+
+        padding:14px;
+
+        border-radius:var(--radius-xl);
+
+    }
+
+    .alert-title{
+
+        font-size:.95rem;
+
+    }
+
+    .alert-message{
+
+        font-size:13px;
+
+    }
+
+    .alert-banner{
+
+        padding:14px 16px;
+
+    }
+
+}
+
+/* ===========================
+   EXTRA SMALL DEVICES
+=========================== */
+
+@media (max-width:400px){
+
+    .alert{
+
+        gap:12px;
+
+    }
+
+    .alert-icon{
+
+        width:36px;
+
+        height:36px;
+
+    }
+
+    .alert-icon i,
+    .alert-icon svg{
+
+        width:16px;
+
+        height:16px;
+
+        font-size:16px;
+
+    }
+
+}
+
+/* ===========================
+   LANDSCAPE
+=========================== */
+
+@media (max-height:500px) and (orientation:landscape){
+
+    .alert-stack,
+    .toast-container{
+
+        max-height:80vh;
+
+        overflow-y:auto;
+
+    }
+
+}
+
+/* ===========================
+   TOUCH DEVICES
+=========================== */
+
+@media (hover:none){
+
+    .alert:hover,
+    .toast:hover,
+
+    .alert-action:hover,
+
+    .alert-banner-btn:hover,
+
+    .alert-close:hover{
+
+        transform:none;
+
+    }
+
+}
+
+/* ===========================
+   PRINT
+=========================== */
+
+@media print{
+
+    .alert-stack,
+    .toast-container,
+
+    .alert-banner{
+
+        display:none !important;
+
+    }
+
+    .alert{
+
+        box-shadow:none;
+
+        border:1px solid #000;
+
+        background:#fff;
+
+        color:#000;
+
+    }
+
+}
+
+/* ===========================
+   REDUCED MOTION
+=========================== */
+
+@media (prefers-reduced-motion:reduce){
+
+    .alert *,
+    .toast *{
+
+        animation:none !important;
+
+        transition:none !important;
+
+        scroll-behavior:auto !important;
+
+    }
+
+}
